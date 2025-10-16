@@ -1,0 +1,13 @@
+{
+  "Array": {
+    "letter": "A",
+    "definition": "Stores multiple values in a single variable.",
+    "explanation": "Like a row of mailboxes where each has a number.",
+    "example": "const arr = ['apple', 'banana'];\nconsole.log(arr[1]);"
+  },
+  "Boolean": {
+    "letter": "B",
+    "definition": "A true/false value.",
+    "explanation": "Like a light switch that's either ON or OFF."
+  }
+}

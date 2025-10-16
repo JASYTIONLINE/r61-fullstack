@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ghost Kitchen – Admin</title>
+
+  <!--
+    Load Bootstrap CSS from its CDN.
+    Why: gives us clean, responsive form styles out of the box.
+    No local CSS is needed for this MVP.
+  -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+</head>
+
+<!--
+  Minimal body. We use a centered container to keep focus on the form.
+  The bg-light gives a subtle gray backdrop; purely visual, no logic impact.
+-->
+<body class="bg-light">
+
+  <!--
+    A simple top bar so you always know which page you’re on.
+    Not required for functionality; helpful during testing.
+  -->
+  <nav class="navbar navbar-light bg-white shadow-sm px-3">
+    <span class="navbar-brand mb-0 h1">Ghost Kitchen — Admin</span>
+    <a class="btn btn-outline-secondary" href="menu.html">View Menu</a>
+  </nav>
+
+  <!--
+    Main content wrapper: Bootstrap container + spacing.
+    Holds a single card with the form inputs.
+  -->
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <!--
+          Card gives a visual boundary around the form; no logic impact.
+        -->
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="mb-3">Add New Menu Item</h4>
+
+            <!--
+              The form element groups all inputs and the submit button.
+              id="itemForm" lets JavaScript locate and control it.
+              We DO NOT set an "action" because we’ll handle submission with JS.
+            -->
+            <form id="itemForm">
+
+              <!-- Item name (string) -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Item Name</label>
+                <!--
+                  text input for the item’s display name (e.g., "Classic Burger").
+                  required forces basic browser validation before JS runs.
+                -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="e.g., Classic Burger"
+                  required>
+              </div>
+
+              <!-- Category (string) -->
+              <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <!--
+                  text input for grouping (e.g., "Burgers", "Sides").
+                  You can change this to a <select> later if you want fixed categories.
+                -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="category"
+                  placeholder="e.g., Burgers"
+                  required>
+              </div>
+
+              <!-- Price (number) -->
+              <div class="mb-3">
+                <label for="price" class="form-label">Price (USD)</label>
+                <!--
+                  number input ensures numeric keyboard and basic numeric constraints.
+                  step="0.01" allows cents; min="0" prevents negative values in the UI.
+                  We will still validate in JS to be safe.
+                -->
+                <input
+                  type="number"
+                  class="form-control"
+                  id="price"
+                  placeholder="e.g., 7.99"
+                  step="0.01"
+                  min="0"
+                  required>
+              </div>
+
+              <!-- Image URL (string) -->
+              <div class="mb-3">
+                <label for="image" class="form-label">Image URL</label>
+                <!--
+                  text input for the image URL to display on menu cards.
+                  A placeholder URL is acceptable. You can host images elsewhere (e.g., Firebase Storage) later.
+                -->
+                <input
+                  type="url"
+                  class="form-control"
+                  id="image"
+                  placeholder="e.g., https://via.placeholder.com/300"
+                  required>
+              </div>
+
+              <!--
+                The submit button. Clicking it triggers the form’s "submit" event,
+                which our JavaScript will intercept to write to Firebase.
+              -->
+              <button type="submit" class="btn btn-primary w-100">Save Item</button>
+            </form>
+
+            <!--
+              This small note reminds future-you which DB keys the app expects.
+              If these keys change, menu.html won’t find the data.
+            -->
+            <p class="text-muted small mt-3">
+              Expected Firebase keys per item: <code>name</code>, <code>price</code>, <code>category</code>, <code>image</code>.
+              Items are written under the <code>/menu</code> node.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--
+    Load Bootstrap’s JS bundle (for any interactive components you might add later).
+    Not required for this form’s logic; harmless to include.
+  -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!--
+    Our application logic.
+    type="module" enables ES module imports (needed to import from app.js).
+  -->
+  <script type="module">
+    // --------------------------------------------------------------------
+    // Import the Firebase helper you already built and tested in app.js.
+    // Path rationale:
+    //   admin.html is at project root
+    //   app.js is inside ./jasytis-ghost-kitchen/assets/js/app.js
+    // --------------------------------------------------------------------
+    import { addData } from "./jasytis-ghost-kitchen/assets/js/app.js";
+
+    // --------------------------------------------------------------------
+    // Grab a reference to the <form> so we can listen to its submit event.
+    // --------------------------------------------------------------------
+    const form = document.getElementById("itemForm");
+
+    // --------------------------------------------------------------------
+    // Attach a "submit" handler.
+    // Why: prevents default page reload and lets us control what happens.
+    // --------------------------------------------------------------------
+    form.addEventListener("submit", async (event) => {
+      // Stop the browser from doing a full page refresh on submit.
+      event.preventDefault();
+
+      // ------------------------------------------------------------------
+      // Read raw input values from the form fields.
+      // We trim strings to remove accidental leading/trailing spaces.
+      // We parse price as a float to ensure it is numeric in the DB.
+      // ------------------------------------------------------------------
+      const name     = document.getElementById("name").value.trim();
+      const category = document.getElementById("category").value.trim();
+      const priceRaw = document.getElementById("price").value.trim();
+      const image    = document.getElementById("image").value.trim();
+
+      // Convert price string → number (NaN if not a valid number).
+      const price = parseFloat(priceRaw);
+
+      // ------------------------------------------------------------------
+      // Minimal validation:
+      //  • All fields must be present
+      //  • price must be a finite, non-negative number
+      // If any check fails, we show an alert and bail out.
+      // ------------------------------------------------------------------
+      if (!name || !category || !image) {
+        alert("Please fill in name, category, and image URL.");
+        return;
+      }
+
+      if (!Number.isFinite(price) || price < 0) {
+        alert("Please enter a valid non-negative price (e.g., 7.99).");
+        return;
+      }
+
+      // ------------------------------------------------------------------
+      // Construct the object EXACTLY in the shape that menu.html expects.
+      // Keys must match what your renderer uses: name, price, category, image.
+      // ------------------------------------------------------------------
+      const newItem = {
+        name,           // string (e.g., "Classic Burger")
+        price,          // number (e.g., 7.99)
+        category,       // string (e.g., "Burgers")
+        image           // string URL (e.g., "https://…")
+      };
+
+      // Helpful for debugging: see what we’re about to write.
+      console.log("New menu item to write:", newItem);
+
+      try {
+        // --------------------------------------------------------------
+        // Write the object to Firebase under /menu as a new child node.
+        // addData("menu", obj) uses push() internally and returns a Promise.
+        // --------------------------------------------------------------
+        await addData("menu", newItem);
+
+        // If we got here, the write succeeded.
+        alert("Menu item saved to Firebase.");
+
+        // Optionally clear the form so you can add another quickly.
+        form.reset();
+      } catch (err) {
+        // If anything went wrong (network rules, etc.), you’ll see it here.
+        console.error("Firebase write error:", err);
+        alert("Failed to save item. Check console for details.");
+      }
+    });
+  </script>
+</body>
+</html>

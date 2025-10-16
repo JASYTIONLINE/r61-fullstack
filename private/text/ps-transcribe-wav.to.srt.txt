@@ -1,0 +1,1 @@
+whisper ".\pmp-prep-16k.wav" --model base --device cuda --fp16 True --threads 32 --language en --output_dir . --output_format srt --verbose False

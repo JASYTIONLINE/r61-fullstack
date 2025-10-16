@@ -1,0 +1,192 @@
+Matthew Shank . 8:29 PM
+Question for you Alex, do you have a syllabus or outline for what you are teaching each class? I like to prepare a head of time with the materials.
+
+Alex Deminchieli 8:36 PM
+Yes, I can add it the program in Slack as soon as I have access to it. On a very high level we'll learn CSS, HTML and JavaScript
+
+Hanna Jade Watson . 8:37 PM
+@Alex Deminchieli would you mind going over the nav again? You can share a screenshot of your line of code for that If it’s easier. Also for the anchor tag for an image from a local file; I just need the code for that please 🙂
+
+You 8:37 PM (Edited)
+you can also resize the source image
+
+Xstaz17 . 8:37 PM
+<img src="your-image.jpg" alt="Description of your image" width="500" height="300">
+
+Alex Deminchieli 8:37 PM
+<img class="one" src="ocean.jpg" width="300" height="300"><br>
+
+Dominic K Bonney . 8:37 PM
+<img height="320px"  width="50%"
+
+Jeannie M. Le Fevre . 8:39 PM
+Alex - Can we go private chat?  Thanks
+I mean for me
+
+Isabella DiBenedetto-Borges . 8:47 PM
+For all the Kpop fans out there I made a Le Sserafim page 😂. Here’s my code and a screenshot.
+
+Isabella DiBenedetto-Borges . 8:48 PM
+I’m obsessed with this
+
+Christopher Showvay . 8:49 PM
+does the <DOCTYPE html> not need an ending tag?
+
+Isabella DiBenedetto-Borges . 8:49 PM
+It should end with </html>
+
+Marcie L Rucker . 8:56 PM
+For us on the slower learning curve anyone one what to share their code?
+
+Paul Hobson . 8:56 PM
+How do you line up text for multiple rows?
+
+Maci Mcgraw . 8:56 PM
+I am assuming we will use this file for CSS
+
+Alex Deminchieli 8:57 PM
+Yes! we will use an html for CSS
+
+Maci Mcgraw . 8:57 PM
+👍
+
+Xstaz17 . 8:58 PM
+when will be the next Session?
+
+Alex Deminchieli 8:58 PM
+Wednesday
+We meet on Mon,Wed,Thur
+
+Xstaz17 . 9:00 PM
+ahhh okay thank you I'm new to the app of simplilearn 
+
+Hanna Jade Watson . 9:00 PM
+@Alex Deminchieli Could you please paste the code for the nav section that you created? And the local image anchor tag as well please?
+
+Douglas Bays . 9:00 PM
+like a grocery list (ul) or a ranking of best quarterbacks (ol)
+
+Marcie L Rucker . 9:15 PM
+Work in progress I am learning so I might be slower
+
+Jason Robbins . 9:16 PM
+in vsc. you can use the short cut  lorem*4   it will generate filler text
+
+Marcie L Rucker . 9:17 PM
+I plan to continue on the assignment even after the class, so I hope we aren’t trying to finish everything before we leave
+
+Dominic K Bonney . 9:10 PM
+are we done for the day?
+
+Alex Deminchieli 9:15 PM
+Yes, pretty much! Students are still working on the assignment
+
+Dominic K Bonney . 9:18 PM
+thanks for the time
+
+Jeannie M. Le Fevre . 9:18 PM
+Hey can someone copy all the chat and replies and send to me.  Private reply so I can give you my email.  I accidently closed the first zoom and lost all the chat.  Thanks.  Please make sure to open all the replies too.
+
+Marcie L Rucker . 9:16 PM
+I am making progress and I have to look everything up as I go I am a first timer
+
+Hanna Jade Watson . 9:19 PM
+Me too!!
+
+Jeannie M. Le Fevre . 9:19 PM
+I sent how to do it early in the chat.
+
+Vanessa Gant . 9:16 PM
+After we send you our assignment will there be anything else?
+
+Alex Deminchieli 9:19 PM
+Not for today! Feel free to take some time and explore the MDN docs I shared
+
+Maci Mcgraw . 9:20 PM
+Is there anything else tonight?
+
+Cohort Manager 9:21 PM
+feedback link- https://lms.simplilearn.com/nps/session/681ccdae621bf59839d5e027/1758583800000/99824073986/zoom
+
+Jessica Bray . 9:22 PM
+It’s a My Little Pony lol
+
+Nabih Sabeh . 9:22 PM
+That was super cool
+Thanks Alex
+
+Hanna Jade Watson . 9:23 PM
+@Alex Deminchieli could I have a super quick breakout? Just asking about navs and divs or if you want me to ask for everyone I can
+
+Ames Monko . 9:23 PM
+Thank you!
+
+Maci Mcgraw . 9:23 PM
+Thank you
+
+Christopher Showvay . 9:23 PM
+how do I save the code so it will show in the website?
+
+Isabella DiBenedetto-Borges . 9:23 PM
+Thank you!
+
+Xstaz17 . 9:23 PM
+Alex my I ask you a question Monday?
+private*
+
+Cohort Manager 9:24 PM
+Feedback link- https://lms.simplilearn.com/nps/session/681ccdae621bf59839d5e027/1758583800000/99824073986/zoom
+
+Jason Blemker . 9:24 PM
+where can we find the recordings of class sessions?
+
+Connor Secord . 9:25 PM
+are you able to see my recording? i couldn't quite figure out bullet points
+
+Marcie L Rucker . 9:27 PM
+I’m going to continue to work on this and will then share, I shared my progress to show that I am working.  It was shared above.
+I hope everyone shares in slack especially for the ones new to coding
+
+Connor Secord . 9:28 PM
+is there a way to condense this text wise? or is that in C
+
+Jeannie M. Le Fevre . 9:28 PM
+Alex, Can you expand all replies and copy and paste entire chat and send to me?
+
+You 9:29 PM
+<table>
+  <caption>
+    The Last Gate
+ </caption>
+  <tr>
+    <th scope="col"> 
+           <h2>Character: Riya Vedanta Backstory</h2>
+            <h3>Role: Protagonist</h3>
+                <ul>The Plan-In-Exile</ul>
+                <ul> The Reluctant Leader</ul></th>
+    <th scope="col"><img
+        src="riya-and-the-team.png"
+        alt="My image file description"
+        attributionsrc="https://a.example/register-source
+                     https://b.example/register-source" /> 
+    
+  </tr>
+</table>
+
+Christopher J Brennan III . 9:31 PM
+Code for site above:
+
+Connor Secord . 9:32 PM
+ill be stealing this...imean learning from...
+
+Xstaz17 . 9:32 PM
+I don't have slack
+
+Hanna Jade Watson . 9:32 PM
+Thank you!
+
+Christopher Showvay . 9:32 PM
+thank you
+
+Roberto Antonio Jay Barrios Zamora . 9:32 PM
+Thank you, goodnight

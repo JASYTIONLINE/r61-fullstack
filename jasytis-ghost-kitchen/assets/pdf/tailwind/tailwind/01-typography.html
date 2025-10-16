@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Typography Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">Typography in Tailwind CSS</h1>
+        
+        <!-- Font Sizes -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Font Sizes</h2>
+            <div class="space-y-2">
+                <p class="text-xs">Extra small text (text-xs)</p>
+                <p class="text-sm">Small text (text-sm)</p>
+                <p class="text-base">Base text (text-base)</p>
+                <p class="text-lg">Large text (text-lg)</p>
+                <p class="text-xl">Extra large text (text-xl)</p>
+                <p class="text-2xl">2X large text (text-2xl)</p>
+                <p class="text-3xl">3X large text (text-3xl)</p>
+                <p class="text-4xl">4X large text (text-4xl)</p>
+            </div>
+        </section>
+
+        <!-- Font Weights -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Font Weights</h2>
+            <div class="space-y-2">
+                <p class="font-thin">Thin font weight (font-thin)</p>
+                <p class="font-light">Light font weight (font-light)</p>
+                <p class="font-normal">Normal font weight (font-normal)</p>
+                <p class="font-medium">Medium font weight (font-medium)</p>
+                <p class="font-semibold">Semibold font weight (font-semibold)</p>
+                <p class="font-bold">Bold font weight (font-bold)</p>
+                <p class="font-extrabold">Extra bold font weight (font-extrabold)</p>
+                <p class="font-black">Black font weight (font-black)</p>
+            </div>
+        </section>
+
+        <!-- Font Styles -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Font Styles</h2>
+            <div class="space-y-2">
+                <p class="italic">Italic text (italic)</p>
+                <p class="not-italic">Not italic text (not-italic)</p>
+                <p class="uppercase">uppercase text (uppercase)</p>
+                <p class="lowercase">LOWERCASE TEXT (lowercase)</p>
+                <p class="capitalize">capitalize text (capitalize)</p>
+                <p class="underline">Underlined text (underline)</p>
+                <p class="line-through">Strike through text (line-through)</p>
+            </div>
+        </section>
+
+        <!-- Text Alignment -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Text Alignment</h2>
+            <div class="space-y-4 border border-gray-200 p-4 rounded">
+                <p class="text-left">Left aligned text (text-left)</p>
+                <p class="text-center">Center aligned text (text-center)</p>
+                <p class="text-right">Right aligned text (text-right)</p>
+                <p class="text-justify">Justified text that spreads across the full width of the container. This is useful for longer paragraphs where you want even spacing. (text-justify)</p>
+            </div>
+        </section>
+
+        <!-- Line Height -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Line Height</h2>
+            <div class="space-y-4">
+                <p class="leading-tight">This paragraph has tight line height (leading-tight). Notice how the lines are closer together compared to normal line height.</p>
+                <p class="leading-normal">This paragraph has normal line height (leading-normal). This is the default line height that provides good readability.</p>
+                <p class="leading-relaxed">This paragraph has relaxed line height (leading-relaxed). The lines have more space between them for better readability.</p>
+                <p class="leading-loose">This paragraph has loose line height (leading-loose). The lines have even more space between them for maximum readability.</p>
+            </div>
+        </section>
+
+        <!-- Letter Spacing -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Letter Spacing</h2>
+            <div class="space-y-2">
+                <p class="tracking-tighter">Tighter letter spacing (tracking-tighter)</p>
+                <p class="tracking-tight">Tight letter spacing (tracking-tight)</p>
+                <p class="tracking-normal">Normal letter spacing (tracking-normal)</p>
+                <p class="tracking-wide">Wide letter spacing (tracking-wide)</p>
+                <p class="tracking-wider">Wider letter spacing (tracking-wider)</p>
+                <p class="tracking-widest">Widest letter spacing (tracking-widest)</p>
+            </div>
+        </section>
+
+        <!-- Practical Example -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Practical Example: Article Layout</h2>
+            <article class="bg-white p-6 rounded-lg shadow-md">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">Article Title</h1>
+                <p class="text-sm text-gray-500 mb-4 uppercase tracking-wide">Published on March 15, 2024</p>
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    This is the first paragraph of our article. Notice how we use larger text size and relaxed line height for better readability.
+                </p>
+                <p class="text-base leading-normal text-gray-600 mb-4">
+                    This is a regular paragraph with normal sizing and line height. This is perfect for body text in most articles and blog posts.
+                </p>
+                <h2 class="text-xl font-semibold text-gray-800 mb-3">Subheading</h2>
+                <p class="text-base leading-normal text-gray-600">
+                    Here's another paragraph under our subheading. Typography is crucial for creating readable and visually appealing web content.
+                </p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

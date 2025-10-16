@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Flexbox Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">Flexbox in Tailwind CSS</h1>
+        
+        <!-- Basic Flex -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Basic Flex Container</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Default Flex (flex)</h3>
+                    <div class="flex gap-4 bg-gray-100 p-4 rounded">
+                        <div class="bg-blue-100 p-4 rounded text-blue-800 font-medium">Item 1</div>
+                        <div class="bg-blue-100 p-4 rounded text-blue-800 font-medium">Item 2</div>
+                        <div class="bg-blue-100 p-4 rounded text-blue-800 font-medium">Item 3</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Inline Flex (inline-flex)</h3>
+                    <div class="inline-flex gap-4 bg-gray-100 p-4 rounded">
+                        <div class="bg-green-100 p-4 rounded text-green-800 font-medium">Item 1</div>
+                        <div class="bg-green-100 p-4 rounded text-green-800 font-medium">Item 2</div>
+                        <div class="bg-green-100 p-4 rounded text-green-800 font-medium">Item 3</div>
+                    </div>
+                    <span class="ml-4 text-gray-600">This content continues inline</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Direction -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Flex Direction</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Row (flex-row)</h3>
+                    <div class="flex flex-row gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">1</div>
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">2</div>
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">3</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Row Reverse (flex-row-reverse)</h3>
+                    <div class="flex flex-row-reverse gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">1</div>
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">2</div>
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">3</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Column (flex-col)</h3>
+                    <div class="flex flex-col gap-2 bg-gray-100 p-4 rounded w-32">
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium text-center">1</div>
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium text-center">2</div>
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium text-center">3</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Column Reverse (flex-col-reverse)</h3>
+                    <div class="flex flex-col-reverse gap-2 bg-gray-100 p-4 rounded w-32">
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium text-center">1</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium text-center">2</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium text-center">3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Wrap -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Flex Wrap</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">No Wrap (flex-nowrap) - Default</h3>
+                    <div class="flex flex-nowrap gap-2 bg-gray-100 p-4 rounded overflow-x-auto">
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium whitespace-nowrap">Long Item 1</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium whitespace-nowrap">Very Long Item 2</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium whitespace-nowrap">Extremely Long Item 3</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium whitespace-nowrap">Super Long Item 4</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium whitespace-nowrap">Very Very Long Item 5</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Wrap (flex-wrap)</h3>
+                    <div class="flex flex-wrap gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">Long Item 1</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">Very Long Item 2</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">Extremely Long Item 3</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">Super Long Item 4</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">Very Very Long Item 5</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Wrap Reverse (flex-wrap-reverse)</h3>
+                    <div class="flex flex-wrap-reverse gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-indigo-100 p-3 rounded text-indigo-800 font-medium">Item 1</div>
+                        <div class="bg-indigo-100 p-3 rounded text-indigo-800 font-medium">Item 2</div>
+                        <div class="bg-indigo-100 p-3 rounded text-indigo-800 font-medium">Item 3</div>
+                        <div class="bg-indigo-100 p-3 rounded text-indigo-800 font-medium">Item 4</div>
+                        <div class="bg-indigo-100 p-3 rounded text-indigo-800 font-medium">Item 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Justify Content -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Justify Content (Main Axis)</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Start (justify-start)</h3>
+                    <div class="flex justify-start gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">A</div>
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">B</div>
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">C</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Center (justify-center)</h3>
+                    <div class="flex justify-center gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">A</div>
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">B</div>
+                        <div class="bg-blue-100 p-3 rounded text-blue-800 font-medium">C</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">End (justify-end)</h3>
+                    <div class="flex justify-end gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium">A</div>
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium">B</div>
+                        <div class="bg-green-100 p-3 rounded text-green-800 font-medium">C</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Space Between (justify-between)</h3>
+                    <div class="flex justify-between gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium">A</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium">B</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium">C</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Space Around (justify-around)</h3>
+                    <div class="flex justify-around gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium">A</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium">B</div>
+                        <div class="bg-purple-100 p-3 rounded text-purple-800 font-medium">C</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Space Evenly (justify-evenly)</h3>
+                    <div class="flex justify-evenly gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">A</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">B</div>
+                        <div class="bg-pink-100 p-3 rounded text-pink-800 font-medium">C</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Align Items -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Align Items (Cross Axis)</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Start (items-start)</h3>
+                    <div class="flex items-start gap-2 bg-gray-100 p-4 rounded h-24">
+                        <div class="bg-red-100 p-2 rounded text-red-800 font-medium">Short</div>
+                        <div class="bg-red-100 p-4 rounded text-red-800 font-medium">Medium</div>
+                        <div class="bg-red-100 p-6 rounded text-red-800 font-medium">Tall</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Center (items-center)</h3>
+                    <div class="flex items-center gap-2 bg-gray-100 p-4 rounded h-24">
+                        <div class="bg-blue-100 p-2 rounded text-blue-800 font-medium">Short</div>
+                        <div class="bg-blue-100 p-4 rounded text-blue-800 font-medium">Medium</div>
+                        <div class="bg-blue-100 p-6 rounded text-blue-800 font-medium">Tall</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">End (items-end)</h3>
+                    <div class="flex items-end gap-2 bg-gray-100 p-4 rounded h-24">
+                        <div class="bg-green-100 p-2 rounded text-green-800 font-medium">Short</div>
+                        <div class="bg-green-100 p-4 rounded text-green-800 font-medium">Medium</div>
+                        <div class="bg-green-100 p-6 rounded text-green-800 font-medium">Tall</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Stretch (items-stretch)</h3>
+                    <div class="flex items-stretch gap-2 bg-gray-100 p-4 rounded h-24">
+                        <div class="bg-yellow-100 p-2 rounded text-yellow-800 font-medium flex items-center">A</div>
+                        <div class="bg-yellow-100 p-2 rounded text-yellow-800 font-medium flex items-center">B</div>
+                        <div class="bg-yellow-100 p-2 rounded text-yellow-800 font-medium flex items-center">C</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flex Grow, Shrink, and Basis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Flex Grow, Shrink, and Basis</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Flex Grow</h3>
+                    <div class="flex gap-2 bg-gray-100 p-4 rounded">
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">Normal</div>
+                        <div class="flex-grow bg-blue-100 p-3 rounded text-blue-800 font-medium">Grow (flex-grow)</div>
+                        <div class="bg-red-100 p-3 rounded text-red-800 font-medium">Normal</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Flex Shrink</h3>
+                    <div class="flex gap-2 bg-gray-100 p-4 rounded">
+                        <div class="flex-shrink-0 bg-green-100 p-3 rounded text-green-800 font-medium w-32">No Shrink (flex-shrink-0)</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium">This item can shrink</div>
+                        <div class="bg-yellow-100 p-3 rounded text-yellow-800 font-medium">This item can shrink too</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Flex Basis</h3>
+                    <div class="flex gap-2 bg-gray-100 p-4 rounded">
+                        <div class="basis-1/4 bg-purple-100 p-3 rounded text-purple-800 font-medium text-center">1/4</div>
+                        <div class="basis-1/2 bg-pink-100 p-3 rounded text-pink-800 font-medium text-center">1/2</div>
+                        <div class="basis-1/4 bg-purple-100 p-3 rounded text-purple-800 font-medium text-center">1/4</div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-4">Flex Shorthand</h3>
+                    <div class="flex gap-2 bg-gray-100 p-4 rounded">
+                        <div class="flex-none bg-red-100 p-3 rounded text-red-800 font-medium">flex-none</div>
+                        <div class="flex-1 bg-blue-100 p-3 rounded text-blue-800 font-medium text-center">flex-1 (grow, shrink, basis auto)</div>
+                        <div class="flex-auto bg-green-100 p-3 rounded text-green-800 font-medium text-center">flex-auto</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Align Self -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Align Self</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex items-center gap-2 bg-gray-100 p-4 rounded h-32">
+                    <div class="self-start bg-red-100 p-3 rounded text-red-800 font-medium">self-start</div>
+                    <div class="self-center bg-blue-100 p-3 rounded text-blue-800 font-medium">self-center</div>
+                    <div class="self-end bg-green-100 p-3 rounded text-green-800 font-medium">self-end</div>
+                    <div class="self-stretch bg-yellow-100 p-3 rounded text-yellow-800 font-medium flex items-center">self-stretch</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Example: Navigation Bar -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Practical Example: Navigation Bar</h2>
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                <nav class="flex items-center justify-between px-6 py-4 bg-blue-600 text-white">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-600 font-bold">L</span>
+                        </div>
+                        <h1 class="text-xl font-bold">Brand</h1>
+                    </div>
+                    
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#" class="hover:text-blue-200 transition-colors">Home</a>
+                        <a href="#" class="hover:text-blue-200 transition-colors">About</a>
+                        <a href="#" class="hover:text-blue-200 transition-colors">Services</a>
+                        <a href="#" class="hover:text-blue-200 transition-colors">Contact</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <button class="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded-lg transition-colors">
+                            Login
+                        </button>
+                        <button class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-colors">
+                            Sign Up
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Practical Example: Card Layout -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Practical Example: Card Layout</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Product Title</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            This card uses flexbox to ensure the button always stays at the bottom, 
+                            regardless of content length.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-purple-600">$99</span>
+                            <button class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-teal-500"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Another Product</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            Shorter description here, but the button will still align with the other cards 
+                            thanks to flexbox.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-600">$149</span>
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-yellow-500"></div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Third Product</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">
+                            This is a much longer description that demonstrates how flexbox 
+                            helps maintain consistent card layouts even when content varies 
+                            significantly in length. The button will still align properly.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-green-600">$79</span>
+                            <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Example: Form Layout -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Practical Example: Form Layout</h2>
+            <div class="bg-white p-6 rounded-lg shadow-sm max-w-2xl mx-auto">
+                <h3 class="text-xl font-semibold text-gray-900 mb-6">Contact Form</h3>
+                <form class="space-y-6">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="flex-1">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="flex-1">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                            <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 sm:justify-end">
+                        <button type="button" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                            Cancel
+                        </button>
+                        <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1497 @@
+Term,Definition,Example,Link
+"Accessibility","Designing content and interfaces that are usable by people with disabilities, including visual, auditory, physical, speech, cognitive, and neurological.","```javascript
+// Accessible label
+<input aria-label='Username'>
+```","[[06-glossary-fs.md#Accessibility|Accessibility]]"
+"AJAX","A technique that allows web applications to retrieve data from the server asynchronously without interfering with the display and behavior of the existing page.","```javascript
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```","[[06-glossary-fs.md#AJAX|AJAX]]"
+"Array","A data structure that holds a list of values in a single variable, accessible by index.","```javascript
+const arr = [1, 2, 3];
+console.log(arr[0]);
+```","[[06-glossary-fs.md#Array|Array]]"
+"Boolean","A primitive data type that can only have two values: true or false.","```javascript
+let isOn = true;
+if (isOn) console.log('The light is on.');
+```","[[06-glossary-fs.md#Boolean|Boolean]]"
+"Callback","A function passed into another function as an argument, which is then invoked inside the outer function.","```javascript
+setTimeout(function() {
+  console.log('Callback executed');
+}, 1000);
+```","[[06-glossary-fs.md#Callback|Callback]]"
+"Class","A blueprint for creating objects with shared properties and methods.","```javascript
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+  bark() {
+    console.log(`${this.name} barks.`);
+  }
+}
+```","[[06-glossary-fs.md#Class|Class]]"
+"Closure","A function that retains access to variables from its lexical scope even when executed outside that scope.","```javascript
+function outer() {
+  let count = 0;
+  return function inner() {
+    return ++count;
+  };
+}
+const counter = outer();
+console.log(counter()); // 1
+```","[[06-glossary-fs.md#Closure|Closure]]"
+"Console","An object in the browser used to output messages, errors, and debug information.","```javascript
+console.log('Hello from the console!');
+```","[[06-glossary-fs.md#Console|Console]]"
+"Constructor","A special method used to initialize objects created with a class.","```javascript
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+```","[[06-glossary-fs.md#Constructor|Constructor]]"
+"CSS","A style sheet language used to describe the presentation of HTML elements.","```css
+body {
+  background-color: #f0f0f0;
+}
+```","[[06-glossary-fs.md#CSS|CSS]]"
+Term,Definition,Example,Link
+"Data Attribute","A custom attribute in HTML used to store extra information on standard elements.","```html
+<div data-user-id=\"12345\">User Info</div>
+```","[[06-glossary-fs.md#Data Attribute|Data Attribute]]"
+"Debugging","The process of identifying and fixing issues or bugs in code.","```javascript
+console.log('Debugging starts here');
+```","[[06-glossary-fs.md#Debugging|Debugging]]"
+"Destructuring","A syntax that allows extracting values from arrays or properties from objects.","```javascript
+const [a, b] = [1, 2];
+const { name } = { name: 'Alice' };
+```","[[06-glossary-fs.md#Destructuring|Destructuring]]"
+"DOM","The Document Object Model represents the structure of a web page as a tree of objects.","```javascript
+document.getElementById('header');
+```","[[06-glossary-fs.md#DOM|DOM]]"
+"Event","An action or occurrence recognized by the browser, such as clicks or key presses.","```javascript
+button.addEventListener('click', handleClick);
+```","[[06-glossary-fs.md#Event|Event]]"
+"Event Listener","A function that waits for a specific event to occur on a specified element.","```javascript
+document.addEventListener('keydown', (e) => {
+  console.log(e.key);
+});
+```","[[06-glossary-fs.md#Event Listener|Event Listener]]"
+"Fetch","A method for making HTTP requests from the browser.","```javascript
+fetch('/api/data')
+  .then(res => res.json())
+  .then(data => console.log(data));
+```","[[06-glossary-fs.md#Fetch|Fetch]]"
+"Flexbox","A CSS layout model for arranging items in rows or columns.","```css
+.container {
+  display: flex;
+  justify-content: center;
+}
+```","[[06-glossary-fs.md#Flexbox|Flexbox]]"
+"For Loop","A control flow statement that repeats a block of code a specific number of times.","```javascript
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+```","[[06-glossary-fs.md#For Loop|For Loop]]"
+"Function","A reusable block of code that performs a specific task.","```javascript
+function greet(name) {
+  return `Hello, ${name}`;
+}
+```","[[06-glossary-fs.md#Function|Function]]"
+"Git","A version control system used to track changes in source code.","```bash
+git commit -m \"Initial commit\"
+```","[[06-glossary-fs.md#Git|Git]]"
+"Grid","A CSS layout system for arranging elements in two dimensions.","```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+```","[[06-glossary-fs.md#Grid|Grid]]"
+"HTML","The standard markup language used to create web pages.","```html
+<!DOCTYPE html>
+<html>
+  <head><title>Page</title></head>
+  <body>Hello</body>
+</html>
+```","[[06-glossary-fs.md#HTML|HTML]]"
+"Hoisting","A JavaScript behavior where variable and function declarations are moved to the top of their scope.","```javascript
+console.log(a); // undefined
+var a = 5;
+```","[[06-glossary-fs.md#Hoisting|Hoisting]]"
+"HTTP","The protocol used for transmitting web pages over the internet.","```http
+GET /index.html HTTP/1.1
+Host: example.com
+```","[[06-glossary-fs.md#HTTP|HTTP]]"
+"ID","An attribute used in HTML to uniquely identify an element.","```html
+<div id=\"main\"></div>
+```","[[06-glossary-fs.md#ID|ID]]"
+"If Statement","A conditional statement that executes code if a condition is true.","```javascript
+if (x > 5) {
+  console.log('x is greater than 5');
+}
+```","[[06-glossary-fs.md#If Statement|If Statement]]"
+"Index","The position of an element in an array, starting from 0.","```javascript
+const items = ['a', 'b', 'c'];
+console.log(items[1]); // 'b'
+```","[[06-glossary-fs.md#Index|Index]]"
+"JavaScript","A scripting language used to create dynamic web content.","```javascript
+alert('Hello, JavaScript!');
+```","[[06-glossary-fs.md#JavaScript|JavaScript]]"
+"JSON","JavaScript Object Notation — a format for storing and exchanging data.","```javascript
+const json = '{\"name\": \"Alice\"}';
+const obj = JSON.parse(json);
+```","[[06-glossary-fs.md#JSON|JSON]]"
+Term,Definition,Example,Link
+"Key","A property name used to access a value within an object.","```javascript
+const user = { name: 'Sam' };
+console.log(user['name']); // 'Sam'
+```","[[06-glossary-fs.md#Key|Key]]"
+"Let","A block-scoped variable declaration introduced in ES6.","```javascript
+let count = 0;
+if (true) {
+  let count = 5;
+  console.log(count); // 5
+}
+```","[[06-glossary-fs.md#Let|Let]]"
+"Link","An HTML element that defines a hyperlink to another resource.","```html
+<a href='https://example.com'>Visit</a>
+```","[[06-glossary-fs.md#Link|Link]]"
+"Local Storage","A web API for storing key-value pairs in the browser that persist across sessions.","```javascript
+localStorage.setItem('theme', 'dark');
+```","[[06-glossary-fs.md#Local Storage|Local Storage]]"
+"Loop","A programming structure that repeats a block of code.","```javascript
+while (true) {
+  console.log('looping...');
+  break;
+}
+```","[[06-glossary-fs.md#Loop|Loop]]"
+"Margin","The space around an element outside of its border in CSS.","```css
+div {
+  margin: 20px;
+}
+```","[[06-glossary-fs.md#Margin|Margin]]"
+"Media Query","A CSS technique used to apply styles based on device characteristics.","```css
+@media (max-width: 600px) {
+  body {
+    background: pink;
+  }
+}
+```","[[06-glossary-fs.md#Media Query|Media Query]]"
+"Method","A function that is a property of an object.","```javascript
+const obj = {
+  greet() {
+    return 'Hi';
+  }
+};
+```","[[06-glossary-fs.md#Method|Method]]"
+"Module","A reusable chunk of code that can be imported/exported in JavaScript.","```javascript
+// math.js
+export function add(a, b) {
+  return a + b;
+}
+```","[[06-glossary-fs.md#Module|Module]]"
+"NaN","Represents 'Not-a-Number', a result of invalid number operations.","```javascript
+console.log(0 / 'a'); // NaN
+```","[[06-glossary-fs.md#NaN|NaN]]"
+"Node","An individual element in the DOM tree.","```javascript
+const node = document.createElement('div');
+```","[[06-glossary-fs.md#Node|Node]]"
+"Null","A special value that represents 'no value' or 'empty'.","```javascript
+let x = null;
+console.log(x); // null
+```","[[06-glossary-fs.md#Null|Null]]"
+"Number","A data type used to represent integer or floating point values.","```javascript
+let age = 42;
+```","[[06-glossary-fs.md#Number|Number]]"
+"Object","A data structure that stores key-value pairs.","```javascript
+const user = { name: 'Eva', age: 30 };
+```","[[06-glossary-fs.md#Object|Object]]"
+"Operator","A symbol used to perform operations on operands (e.g., +, -, *, ===).","```javascript
+let sum = 2 + 3;
+```","[[06-glossary-fs.md#Operator|Operator]]"
+"Padding","The space between the content and the border of an element in CSS.","```css
+div {
+  padding: 10px;
+}
+```","[[06-glossary-fs.md#Padding|Padding]]"
+"Parameter","A variable listed as part of a function’s definition.","```javascript
+function greet(name) {
+  console.log('Hello ' + name);
+}
+```","[[06-glossary-fs.md#Parameter|Parameter]]"
+"Promise","An object representing the eventual completion or failure of an asynchronous operation.","```javascript
+fetch('/api').then(res => res.json());
+```","[[06-glossary-fs.md#Promise|Promise]]"
+"Prototype","An object from which other objects inherit properties and methods.","```javascript
+function Person() {}
+Person.prototype.sayHi = function() {
+  return 'Hi';
+};
+```","[[06-glossary-fs.md#Prototype|Prototype]]"
+"Query Selector","A method that returns the first element that matches a CSS selector.","```javascript
+document.querySelector('.box');
+```","[[06-glossary-fs.md#Query Selector|Query Selector]]"
+"React","A JavaScript library for building interactive user interfaces using reusable components.","```javascript
+function App() {
+  return <h1>Hello, React!</h1>;
+}
+```","[[06-glossary-fs.md#React|React]]"
+"Reduce","A method that executes a reducer function on each element of an array to return a single value.","```javascript
+[1, 2, 3].reduce((acc, val) => acc + val, 0);
+```","[[06-glossary-fs.md#Reduce|Reduce]]"
+"Regex","A sequence of characters that define a search pattern, often used for pattern matching in strings.","```javascript
+const pattern = /abc/;
+pattern.test('abcdef'); // true
+```","[[06-glossary-fs.md#Regex|Regex]]"
+"Render","The process of generating HTML from templates or JavaScript code.","```javascript
+ReactDOM.render(<App />, document.getElementById('root'));
+```","[[06-glossary-fs.md#Render|Render]]"
+"Request","An HTTP message sent from the client to the server.","```javascript
+fetch('/data');
+```","[[06-glossary-fs.md#Request|Request]]"
+"Return","A statement that ends function execution and specifies a value to return.","```javascript
+function add(a, b) {
+  return a + b;
+}
+```","[[06-glossary-fs.md#Return|Return]]"
+"Scope","The accessibility of variables in different parts of the code.","```javascript
+let x = 5;
+function test() {
+  console.log(x); // x is accessible
+}
+```","[[06-glossary-fs.md#Scope|Scope]]"
+"Script","A tag in HTML used to embed or reference executable JavaScript code.","```html
+<script src=\"main.js\"></script>
+```","[[06-glossary-fs.md#Script|Script]]"
+"Selector","A pattern used to select elements in CSS.","```css
+p.intro {
+  color: blue;
+}
+```","[[06-glossary-fs.md#Selector|Selector]]"
+"Server","A system that provides resources, data, or services to clients over a network.","```javascript
+// Express server
+app.get('/', (req, res) => res.send('Hi'));
+```","[[06-glossary-fs.md#Server|Server]]"
+"Session","A way to persist user data between multiple requests or pages.","```javascript
+sessionStorage.setItem('user', 'Alice');
+```","[[06-glossary-fs.md#Session|Session]]"
+"SetTimeout","Schedules code to run after a delay.","```javascript
+setTimeout(() => {
+  console.log('Done!');
+}, 1000);
+```","[[06-glossary-fs.md#SetTimeout|SetTimeout]]"
+"Shadow DOM","A web component feature that allows encapsulation of DOM and style.","```javascript
+const shadow = element.attachShadow({ mode: 'open' });
+```","[[06-glossary-fs.md#Shadow DOM|Shadow DOM]]"
+"Spread Operator","Expands an iterable (like an array) into individual elements.","```javascript
+const arr = [1, 2];
+const more = [...arr, 3];
+```","[[06-glossary-fs.md#Spread Operator|Spread Operator]]"
+"SQL","Structured Query Language, used to interact with relational databases.","```sql
+SELECT * FROM users;
+```","[[06-glossary-fs.md#SQL|SQL]]"
+"State","An object that stores dynamic data for a component, especially in React.","```javascript
+const [count, setCount] = useState(0);
+```","[[06-glossary-fs.md#State|State]]"
+"String","A sequence of characters used to represent text.","```javascript
+let message = 'Hello!';
+```","[[06-glossary-fs.md#String|String]]"
+"Switch","A control structure that checks a value against multiple cases.","```javascript
+switch (x) {
+  case 1: console.log('One'); break;
+}
+```","[[06-glossary-fs.md#Switch|Switch]]"
+"Template Literal","A string literal that allows embedded expressions.","```javascript
+const name = 'Alice';
+console.log(`Hello, ${name}`);
+```","[[06-glossary-fs.md#Template Literal|Template Literal]]"
+"Terminal","A text interface to interact with a computer or shell.","```bash
+npm install axios
+```","[[06-glossary-fs.md#Terminal|Terminal]]"
+"Ternary Operator","A shorthand conditional expression using `?` and `:`.","```javascript
+let type = age > 18 ? 'Adult' : 'Minor';
+```","[[06-glossary-fs.md#Ternary Operator|Ternary Operator]]"
+"This","A keyword that refers to the object executing the current function.","```javascript
+const obj = {
+  name: 'Sam',
+  greet() { return this.name; }
+};
+```","[[06-glossary-fs.md#This|This]]"
+"Throw","Used to raise exceptions in JavaScript.","```javascript
+throw new Error('Something went wrong');
+```","[[06-glossary-fs.md#Throw|Throw]]"
+"Try","A statement to test a block of code for errors.","```javascript
+try {
+  riskyFunction();
+} catch (e) {
+  console.error(e);
+}
+```","[[06-glossary-fs.md#Try|Try]]"
+"Typeof","An operator that returns the type of a variable.","```javascript
+typeof 42; // \"number\"
+```","[[06-glossary-fs.md#Typeof|Typeof]]"
+"Undefined","A variable that has been declared but not assigned a value.","```javascript
+let x;
+console.log(x); // undefined
+```","[[06-glossary-fs.md#Undefined|Undefined]]"
+"URL","A uniform resource locator used to identify resources on the web.","```javascript
+const url = new URL('https://example.com');
+```","[[06-glossary-fs.md#URL|URL]]"
+"UseEffect","A React hook for handling side effects in function components.","```javascript
+useEffect(() => {
+  fetchData();
+}, []);
+```","[[06-glossary-fs.md#UseEffect|UseEffect]]"
+"UseState","A React hook for declaring state in functional components.","```javascript
+const [count, setCount] = useState(0);
+```","[[06-glossary-fs.md#UseState|UseState]]"
+"UUID","Universally Unique Identifier — a unique string often used as an ID.","```javascript
+crypto.randomUUID();
+```","[[06-glossary-fs.md#UUID|UUID]]"
+"Value","The data assigned to a variable or property.","```javascript
+let a = 42;
+```","[[06-glossary-fs.md#Value|Value]]"
+"Var","An older way to declare variables in JavaScript with function scope.","```javascript
+var message = 'hi';
+```","[[06-glossary-fs.md#Var|Var]]"
+"Variable","A container used to store data values.","```javascript
+let score = 10;
+```","[[06-glossary-fs.md#Variable|Variable]]"
+"Viewport","The visible area of a web page within the browser window.","```css
+@media (max-width: 600px) { ... }
+```","[[06-glossary-fs.md#Viewport|Viewport]]"
+"Visibility","A CSS property controlling whether an element is visible or hidden.","```css
+visibility: hidden;
+```","[[06-glossary-fs.md#Visibility|Visibility]]"
+"Void","A JavaScript operator that evaluates an expression and returns undefined.","```javascript
+void function() {
+  alert('hi');
+}();
+```","[[06-glossary-fs.md#Void|Void]]"
+"Vue","A JavaScript framework for building user interfaces.","```javascript
+new Vue({ el: '#app' });
+```","[[06-glossary-fs.md#Vue|Vue]]"
+"Web API","A set of browser-provided interfaces for interacting with features like storage, DOM, and network.","```javascript
+navigator.geolocation.getCurrentPosition(...);
+```","[[06-glossary-fs.md#Web API|Web API]]"
+"WebSocket","A protocol for two-way communication between client and server.","```javascript
+const ws = new WebSocket('ws://example.com');
+```","[[06-glossary-fs.md#WebSocket|WebSocket]]"
+"While Loop","A loop that executes as long as the condition is true.","```javascript
+let i = 0;
+while (i < 3) {
+  console.log(i++);
+}
+```","[[06-glossary-fs.md#While Loop|While Loop]]"
+"Width","A CSS property that sets the horizontal size of an element.","```css
+div { width: 100px; }
+```","[[06-glossary-fs.md#Width|Width]]"
+"Window","The global object representing the browser window.","```javascript
+console.log(window.innerWidth);
+```","[[06-glossary-fs.md#Window|Window]]"
+"XHR","XMLHttpRequest — an older API for making HTTP requests in JavaScript.","```javascript
+const xhr = new XMLHttpRequest();
+xhr.open('GET', '/data');
+xhr.send();
+```","[[06-glossary-fs.md#XHR|XHR]]"
+"XML","Extensible Markup Language — used to store and transport structured data.","```xml
+<user><name>Alice</name></user>
+```","[[06-glossary-fs.md#XML|XML]]"
+"Z-index","A CSS property that controls the stacking order of elements.","```css
+div { z-index: 10; }
+```","[[06-glossary-fs.md#Z-index|Z-index]]"
+"Zoom","A CSS property that scales the size of content (non-standard).","```css
+body { zoom: 150%; }
+```","[[06-glossary-fs.md#Zoom|Zoom]]"
+"Absolute Positioning","A CSS positioning method where an element is positioned relative to its nearest positioned ancestor or the document if none exists.","```css
+div {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+```","[[06-glossary-fs.md#Absolute Positioning|Absolute Positioning]]"
+"Anchor Tag","An HTML element used to define hyperlinks to other pages or locations.","```html
+<a href='https://example.com'>Visit</a>
+```","[[06-glossary-fs.md#Anchor Tag|Anchor Tag]]"
+"API","A set of rules and protocols that allow software components to communicate.","```javascript
+fetch('https://api.example.com/data')
+  .then(response => response.json());
+```","[[06-glossary-fs.md#API|API]]"
+"Arithmetic Operator","An operator that performs mathematical operations like +, -, *, /.","```javascript
+let sum = 10 + 5;
+```","[[06-glossary-fs.md#Arithmetic Operator|Arithmetic Operator]]"
+"Attribute","Additional information added to HTML elements.","```html
+<img src='image.jpg' alt='Description'>
+```","[[06-glossary-fs.md#Attribute|Attribute]]"
+"Autofocus","An HTML attribute that allows an element to gain focus automatically when the page loads.","```html
+<input type='text' autofocus>
+```","[[06-glossary-fs.md#Autofocus|Autofocus]]"
+"Back-End","The server-side of web development responsible for business logic and data handling.","```bash
+node server.js
+```","[[06-glossary-fs.md#Back-End|Back-End]]"
+"Base Tag","An HTML element that sets the base URL for all relative links in a document.","```html
+<base href='https://example.com/'>
+```","[[06-glossary-fs.md#Base Tag|Base Tag]]"
+"Block Element","An HTML element that starts on a new line and takes up the full width available.","```html
+<div>This is a block element</div>
+```","[[06-glossary-fs.md#Block Element|Block Element]]"
+"Box Model","A CSS concept describing how the size of an element is determined by its content, padding, border, and margin.","```css
+div {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 20px;
+}
+```","[[06-glossary-fs.md#Box Model|Box Model]]"
+"Break Statement","Used to exit a loop or switch statement prematurely.","```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 3) break;
+}
+```","[[06-glossary-fs.md#Break Statement|Break Statement]]"
+"Browser","Software used to access and display web pages.","```javascript
+console.log(window.navigator.userAgent);
+```","[[06-glossary-fs.md#Browser|Browser]]"
+"Button Element","An HTML element used to create clickable buttons.","```html
+<button>Click me</button>
+```","[[06-glossary-fs.md#Button Element|Button Element]]"
+"Call Stack","A mechanism for tracking function execution in JavaScript.","```javascript
+function one() {
+  two();
+}
+function two() {
+  three();
+}
+function three() {
+  console.log('End of stack');
+}
+one();
+```","[[06-glossary-fs.md#Call Stack|Call Stack]]"
+"Camel Case","A naming convention where the first word is lowercase and subsequent words are capitalized.","```javascript
+let firstName = 'John';
+```","[[06-glossary-fs.md#Camel Case|Camel Case]]"
+"Checkbox","An input element that allows users to select one or more options.","```html
+<input type='checkbox' checked>
+```","[[06-glossary-fs.md#Checkbox|Checkbox]]"
+"Child Element","An element that is nested inside another element in the DOM.","```html
+<ul>
+  <li>Item</li>
+</ul>
+```","[[06-glossary-fs.md#Child Element|Child Element]]"
+"Class Attribute","Used in HTML to assign CSS styles or JavaScript behavior to elements.","```html
+<div class='highlight'></div>
+```","[[06-glossary-fs.md#Class Attribute|Class Attribute]]"
+"Client-Side","Operations that occur in the user's browser, not on the server.","```javascript
+alert('Client-side execution');
+```","[[06-glossary-fs.md#Client-Side|Client-Side]]"
+"Cloning","Creating a duplicate of a value or object in memory.","```javascript
+const clone = [...originalArray];
+```","[[06-glossary-fs.md#Cloning|Cloning]]"
+"Code Block","A section of code grouped together usually by braces `{}` in JavaScript.","```javascript
+if (x > 5) {
+  console.log('x is large');
+}
+```","[[06-glossary-fs.md#Code Block|Code Block]]"
+"CodePen","An online development environment for front-end web development.","```html
+<!-- demo and share front-end snippets -->
+```","[[06-glossary-fs.md#CodePen|CodePen]]"
+"Color Property","A CSS property that sets the text color of an element.","```css
+p {
+  color: red;
+}
+```","[[06-glossary-fs.md#Color Property|Color Property]]"
+"Command Line","A text-based interface used to interact with a computer or server.","```bash
+cd projects && node app.js
+```","[[06-glossary-fs.md#Command Line|Command Line]]"
+"Comment","Text in code ignored by the interpreter, used for documentation.","```javascript
+// This is a comment
+```","[[06-glossary-fs.md#Comment|Comment]]"
+"Comparison Operator","An operator that compares two values and returns a Boolean.","```javascript
+x === 5;
+```","[[06-glossary-fs.md#Comparison Operator|Comparison Operator]]"
+"Compiler","A tool that converts code into machine-readable instructions.","```bash
+tsc script.ts
+```","[[06-glossary-fs.md#Compiler|Compiler]]"
+"Computed Property","A JavaScript object key defined dynamically using square brackets.","```javascript
+let key = 'name';
+let user = { [key]: 'John' };
+```","[[06-glossary-fs.md#Computed Property|Computed Property]]"
+"Concatenation","Joining two or more strings into one.","```javascript
+let fullName = 'John' + ' ' + 'Doe';
+```","[[06-glossary-fs.md#Concatenation|Concatenation]]"
+"Conditional","A statement that executes code based on whether a condition is true.","```javascript
+if (x > 10) {
+  console.log('x is big');
+}
+```","[[06-glossary-fs.md#Conditional|Conditional]]"
+"Console Log","A function that outputs messages to the web console.","```javascript
+console.log('debug info');
+```","[[06-glossary-fs.md#Console Log|Console Log]]"
+"Constant","A variable declared with `const` that cannot be reassigned.","```javascript
+const PI = 3.14;
+```","[[06-glossary-fs.md#Constant|Constant]]"
+"ContentEditable","An HTML attribute that makes elements editable by the user.","```html
+<div contenteditable='true'>Edit me</div>
+```","[[06-glossary-fs.md#ContentEditable|ContentEditable]]"
+"CSS Grid","A CSS layout system for creating two-dimensional grid-based designs.","```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+```","[[06-glossary-fs.md#CSS Grid|CSS Grid]]"
+"Cursor","A CSS property that defines the type of mouse cursor when over an element.","```css
+button {
+  cursor: pointer;
+}
+```","[[06-glossary-fs.md#Cursor|Cursor]]"
+"Data Type","A classification of data that tells the compiler or interpreter how the programmer intends to use it.","```javascript
+typeof 'hello'; // 'string'
+```","[[06-glossary-fs.md#Data Type|Data Type]]"
+"Dataset","A DOM property that provides access to all custom data attributes on an element.","```html
+<div data-user-id='123'></div>
+```","[[06-glossary-fs.md#Dataset|Dataset]]"
+"Defer","An HTML attribute that tells the browser to execute the script after the document has been parsed.","```html
+<script src='script.js' defer></script>
+```","[[06-glossary-fs.md#Defer|Defer]]"
+"Delete Operator","Removes a property from an object.","```javascript
+delete user.name;
+```","[[06-glossary-fs.md#Delete Operator|Delete Operator]]"
+"Developer Tools","Built-in browser tools for inspecting, debugging, and profiling web pages.","```javascript
+console.log('Inspect me');
+```","[[06-glossary-fs.md#Developer Tools|Developer Tools]]"
+"Disabled Attribute","An HTML attribute used to disable user input or interaction.","```html
+<input type='text' disabled>
+```","[[06-glossary-fs.md#Disabled Attribute|Disabled Attribute]]"
+"Display Property","A CSS property that determines how an element is displayed.","```css
+div {
+  display: flex;
+}
+```","[[06-glossary-fs.md#Display Property|Display Property]]"
+"Document","The root node of the HTML DOM representing the entire page.","```javascript
+console.title = document.title;
+```","[[06-glossary-fs.md#Document|Document]]"
+"Doctype","A declaration that informs the browser about the type of HTML being used.","```html
+<!DOCTYPE html>
+```","[[06-glossary-fs.md#Doctype|Doctype]]"
+"Dot Notation","A syntax used to access properties of an object.","```javascript
+const user = { name: 'Alice' };
+console.log(user.name);
+```","[[06-glossary-fs.md#Dot Notation|Dot Notation]]"
+"Download","The process of receiving data from a server to a local device.","```javascript
+window.location.href = 'file.pdf';
+```","[[06-glossary-fs.md#Download|Download]]"
+"Dropdown","A UI element that displays a list of options when clicked.","```html
+<select>
+  <option>Option 1</option>
+</select>
+```","[[06-glossary-fs.md#Dropdown|Dropdown]]"
+"Element","An individual HTML component such as a tag or node in the DOM.","```javascript
+const el = document.createElement('p');
+```","[[06-glossary-fs.md#Element|Element]]"
+"Else","A conditional branch that executes if the preceding `if` condition is false.","```javascript
+if (x > 5) {
+  console.log('big');
+} else {
+  console.log('small');
+}
+```","[[06-glossary-fs.md#Else|Else]]"
+"Em","A CSS unit relative to the current element’s font size.","```css
+p {
+  font-size: 2em;
+}
+```","[[06-glossary-fs.md#Em|Em]]"
+"EncodeURI","A JavaScript function to encode a URI component safely for use in a URL.","```javascript
+const safe = encodeURI('https://example.com/?q=hello world');
+```","[[06-glossary-fs.md#EncodeURI|EncodeURI]]"
+"EncodeURIComponent","Encodes a URI component including special characters.","```javascript
+const safe = encodeURIComponent('hello world & friends');
+```","[[06-glossary-fs.md#EncodeURIComponent|EncodeURIComponent]]"
+"Enum","A data type that consists of a set of named values.","```typescript
+enum Direction { Up, Down, Left, Right }
+```","[[06-glossary-fs.md#Enum|Enum]]"
+"Error","An object representing a runtime error in JavaScript.","```javascript
+throw new Error('Something went wrong');
+```","[[06-glossary-fs.md#Error|Error]]"
+"Escape","To remove or neutralize special characters in code or strings.","```javascript
+const html = '&lt;div&gt;';
+```","[[06-glossary-fs.md#Escape|Escape]]"
+"Event Bubbling","The process where an event starts from the target element and bubbles up through ancestors.","```javascript
+document.body.addEventListener('click', () => {
+  console.log('body clicked');
+});
+```","[[06-glossary-fs.md#Event Bubbling|Event Bubbling]]"
+"Event Delegation","A pattern where a single handler manages events for multiple child elements.","```javascript
+ul.addEventListener('click', e => {
+  if (e.target.tagName === 'LI') handleClick(e);
+});
+```","[[06-glossary-fs.md#Event Delegation|Event Delegation]]"
+"Event Loop","The mechanism that handles async operations and executes callbacks in order.","```javascript
+setTimeout(() => console.log('Tick'), 0);
+console.log('Tock');
+```","[[06-glossary-fs.md#Event Loop|Event Loop]]"
+"Event.preventDefault","Prevents the default browser behavior for an event.","```javascript
+form.addEventListener('submit', e => {
+  e.preventDefault();
+});
+```","[[06-glossary-fs.md#Event.preventDefault|Event.preventDefault]]"
+"Event.target","Refers to the element that triggered the event.","```javascript
+document.addEventListener('click', e => {
+  console.log(e.target);
+});
+```","[[06-glossary-fs.md#Event.target|Event.target]]"
+"Export","Allows functions, objects, or primitives to be shared from a module.","```javascript
+export const value = 42;
+```","[[06-glossary-fs.md#Export|Export]]"
+"Expression","Any valid unit of code that resolves to a value.","```javascript
+2 + 2
+```","[[06-glossary-fs.md#Expression|Expression]]"
+"Extends","A keyword used in class declarations to create a subclass.","```javascript
+class Dog extends Animal {}
+```","[[06-glossary-fs.md#Extends|Extends]]"
+"Falsy","A value that evaluates to false when converted to a boolean.","```javascript
+false, 0, '', null, undefined, NaN
+```","[[06-glossary-fs.md#Falsy|Falsy]]"
+"Favicon","The small icon shown in browser tabs next to the page title.","```html
+<link rel='icon' href='/favicon.ico'>
+```","[[06-glossary-fs.md#Favicon|Favicon]]"
+"Fetch Metadata","Headers sent with CORS and preflight requests to inform the server about the request's context.","```http
+Sec-Fetch-Site: same-origin
+```","[[06-glossary-fs.md#Fetch Metadata|Fetch Metadata]]"
+"File Input","An HTML input type for uploading files.","```html
+<input type='file'>
+```","[[06-glossary-fs.md#File Input|File Input]]"
+"Filter","An array method that creates a new array with elements that pass a test.","```javascript
+[1, 2, 3].filter(n => n > 1);
+```","[[06-glossary-fs.md#Filter|Filter]]"
+"Finally","A block that executes after try/catch regardless of the result.","```javascript
+try { ... } catch(e) { ... } finally { ... }
+```","[[06-glossary-fs.md#Finally|Finally]]"
+"Float","A CSS property to position elements to the left or right.","```css
+img {
+  float: left;
+}
+```","[[06-glossary-fs.md#Float|Float]]"
+"Font-Family","A CSS property that defines the typeface of text.","```css
+body {
+  font-family: Arial, sans-serif;
+}
+```","[[06-glossary-fs.md#Font-Family|Font-Family]]"
+"Font-Size","A CSS property that controls the size of text.","```css
+p {
+  font-size: 16px;
+}
+```","[[06-glossary-fs.md#Font-Size|Font-Size]]"
+"Form","An HTML element used to collect and submit user input.","```html
+<form action='/submit'>
+  <input name='email'>
+</form>
+```","[[06-glossary-fs.md#Form|Form]]"
+"ForEach","An array method that executes a function for each element.","```javascript
+[1, 2, 3].forEach(n => console.log(n));
+```","[[06-glossary-fs.md#ForEach|ForEach]]"
+"Framework","A collection of tools, libraries, and best practices for building software.","```bash
+npx create-react-app my-app
+```","[[06-glossary-fs.md#Framework|Framework]]"
+"Full Stack","A developer who works on both front-end and back-end systems.","```bash
+node server.js && npm run dev
+```","[[06-glossary-fs.md#Full Stack|Full Stack]]"
+"Function Expression","A function defined as part of an expression, often anonymous.","```javascript
+const add = function(a, b) {
+  return a + b;
+};
+```","[[06-glossary-fs.md#Function Expression|Function Expression]]"
+"Function Scope","A scope limited to within the body of a function.","```javascript
+function test() {
+  var x = 10;
+}
+```","[[06-glossary-fs.md#Function Scope|Function Scope]]"
+"Garbage Collection","An automatic memory management feature that reclaims memory no longer in use.","```javascript
+let unused = null;
+```","[[06-glossary-fs.md#Garbage Collection|Garbage Collection]]"
+"GitHub","A platform for hosting and collaborating on code repositories.","```bash
+git push origin main
+```","[[06-glossary-fs.md#GitHub|GitHub]]"
+"Global Scope","Variables or functions defined outside any block or function.","```javascript
+var x = 100;
+```","[[06-glossary-fs.md#Global Scope|Global Scope]]"
+"Gzip Compression","A method to reduce the size of web files for faster transfer.","```bash
+curl --compressed https://example.com
+```","[[06-glossary-fs.md#Gzip Compression|Gzip Compression]]"
+"Hash","A value returned by a hash function used to uniquely identify data.","```javascript
+window.location.hash = '#section1';
+```","[[06-glossary-fs.md#Hash|Hash]]"
+"Header","A part of the HTTP request/response that carries metadata.","```http
+Content-Type: application/json
+```","[[06-glossary-fs.md#Header|Header]]"
+"Height","A CSS property that sets the height of an element.","```css
+div {
+  height: 100px;
+}
+```","[[06-glossary-fs.md#Height|Height]]"
+"Hidden Attribute","An HTML attribute that hides an element from rendering.","```html
+<div hidden>This is hidden</div>
+```","[[06-glossary-fs.md#Hidden Attribute|Hidden Attribute]]"
+"Highlight","A visual emphasis or background change to attract attention.","```css
+mark {
+  background: yellow;
+}
+```","[[06-glossary-fs.md#Highlight|Highlight]]"
+"Hoisting","The JavaScript behavior where declarations are moved to the top of their scope.","```javascript
+console.log(x); // undefined
+var x = 10;
+```","[[06-glossary-fs.md#Hoisting|Hoisting]]"
+"HTMLCollection","A live list of DOM elements retrieved by methods like getElementsByTagName.","```javascript
+document.getElementsByTagName('div');
+```","[[06-glossary-fs.md#HTMLCollection|HTMLCollection]]"
+"HTTPS","A secure version of HTTP using SSL/TLS encryption.","```bash
+https://example.com
+```","[[06-glossary-fs.md#HTTPS|HTTPS]]"
+"Icon","A small graphical representation used for buttons or branding.","```html
+<link rel='icon' href='favicon.ico'>
+```","[[06-glossary-fs.md#Icon|Icon]]"
+"Iframe","An HTML element used to embed another HTML page within the current one.","```html
+<iframe src='https://example.com'></iframe>
+```","[[06-glossary-fs.md#Iframe|Iframe]]"
+"If Statement","A conditional construct used to execute code only if a condition is true.","```javascript
+if (score > 90) {
+  console.log('Great job!');
+}
+```","[[06-glossary-fs.md#If Statement|If Statement]]"
+"Image Tag","An HTML tag used to display images on a web page.","```html
+<img src='photo.jpg' alt='A photo'>
+```","[[06-glossary-fs.md#Image Tag|Image Tag]]"
+"Import","A statement used to bring in functions, objects, or other modules.","```javascript
+import { add } from './math.js';
+```","[[06-glossary-fs.md#Import|Import]]"
+"Increment","To increase a numerical value, often by one.","```javascript
+let count = 0;
+count++;
+```","[[06-glossary-fs.md#Increment|Increment]]"
+"IndexOf","A string or array method to find the position of a value.","```javascript
+'apples'.indexOf('p'); // 1
+```","[[06-glossary-fs.md#IndexOf|IndexOf]]"
+"Inheritance","The mechanism by which one object can acquire the properties of another.","```javascript
+class Dog extends Animal {}
+```","[[06-glossary-fs.md#Inheritance|Inheritance]]"
+"Input Element","An HTML element used to receive user input.","```html
+<input type='text'>
+```","[[06-glossary-fs.md#Input Element|Input Element]]"
+"Instance","A specific realization of an object or class.","```javascript
+let dog = new Dog();
+```","[[06-glossary-fs.md#Instance|Instance]]"
+"Instanceof","An operator to test if an object is an instance of a class or constructor.","```javascript
+console.log(dog instanceof Animal); // true
+```","[[06-glossary-fs.md#Instanceof|Instanceof]]"
+"Integer","A whole number, positive or negative, without decimals.","```javascript
+let count = 42;
+```","[[06-glossary-fs.md#Integer|Integer]]"
+"Interpolation","Inserting expressions into a string, typically using template literals.","```javascript
+const name = 'Alex';
+console.log(`Hello, ${name}`);
+```","[[06-glossary-fs.md#Interpolation|Interpolation]]"
+"Interval","A repeated action set at specified time delays.","```javascript
+setInterval(() => {
+  console.log('Tick');
+}, 1000);
+```","[[06-glossary-fs.md#Interval|Interval]]"
+"IsNaN","A JavaScript function that checks if a value is Not-a-Number.","```javascript
+isNaN('hello'); // true
+```","[[06-glossary-fs.md#IsNaN|IsNaN]]"
+"Join","An array method that joins all elements into a string.","```javascript
+[1, 2, 3].join(','); // \"1,2,3\"
+```","[[06-glossary-fs.md#Join|Join]]"
+"Justify Content","A CSS flexbox property to align items along the main axis.","```css
+.container {
+  display: flex;
+  justify-content: center;
+}
+```","[[06-glossary-fs.md#Justify Content|Justify Content]]"
+"Keydown","An event that fires when a key is pressed down.","```javascript
+document.addEventListener('keydown', e => console.log(e.key));
+```","[[06-glossary-fs.md#Keydown|Keydown]]"
+"Keyup","An event that fires when a key is released.","```javascript
+input.addEventListener('keyup', e => console.log(e.key));
+```","[[06-glossary-fs.md#Keyup|Keyup]]"
+"Kebab Case","A naming convention where words are lowercased and separated by dashes.","```css
+.my-class-name {
+  color: blue;
+}
+```","[[06-glossary-fs.md#Kebab Case|Kebab Case]]"
+"Label","An HTML element that provides a user-readable name for a form input.","```html
+<label for='email'>Email</label>
+<input id='email'>
+```","[[06-glossary-fs.md#Label|Label]]"
+"Lazy Loading","A design pattern that delays the loading of resources until needed.","```html
+<img loading='lazy' src='image.jpg'>
+```","[[06-glossary-fs.md#Lazy Loading|Lazy Loading]]"
+"Layout","The arrangement of elements on a web page.","```css
+.grid {
+  display: grid;
+}
+```","[[06-glossary-fs.md#Layout|Layout]]"
+"Lexical Scope","The region of source code in which a variable is defined.","```javascript
+function outer() {
+  let x = 10;
+  function inner() {
+    console.log(x); // accessible
+  }
+}
+```","[[06-glossary-fs.md#Lexical Scope|Lexical Scope]]"
+"Link Tag","An HTML tag used to link external resources like stylesheets.","```html
+<link rel='stylesheet' href='styles.css'>
+```","[[06-glossary-fs.md#Link Tag|Link Tag]]"
+"List","An HTML structure for ordered or unordered groups of items.","```html
+<ul>
+  <li>Item 1</li>
+</ul>
+```","[[06-glossary-fs.md#List|List]]"
+"Local Scope","A scope that exists inside a function or block.","```javascript
+function test() {
+  let local = 'hello';
+}
+```","[[06-glossary-fs.md#Local Scope|Local Scope]]"
+"Loop Control","Statements like break and continue that affect loop execution.","```javascript
+for (let i = 0; i < 5; i++) {
+  if (i === 3) continue;
+}
+```","[[06-glossary-fs.md#Loop Control|Loop Control]]"
+"Main Thread","The single thread where JavaScript executes in the browser.","```javascript
+// Blocks rendering:
+while(true){}
+```","[[06-glossary-fs.md#Main Thread|Main Thread]]"
+"Map","An array method that transforms each item and returns a new array.","```javascript
+[1, 2, 3].map(n => n * 2);
+```","[[06-glossary-fs.md#Map|Map]]"
+"Math Object","A built-in JavaScript object for mathematical functions.","```javascript
+Math.round(4.7);
+```","[[06-glossary-fs.md#Math Object|Math Object]]"
+"Media","Audio, video, or images used in web development.","```html
+<video controls src='movie.mp4'></video>
+```","[[06-glossary-fs.md#Media|Media]]"
+"Media Type","Defines the type of data being sent, such as text/html or application/json.","```http
+Content-Type: application/json
+```","[[06-glossary-fs.md#Media Type|Media Type]]"
+"Method Chaining","Calling multiple methods in a single statement.","```javascript
+[1, 2, 3].map(n => n * 2).filter(n => n > 2);
+```","[[06-glossary-fs.md#Method Chaining|Method Chaining]]"
+"Minification","The process of removing unnecessary characters from code to reduce file size.","```bash
+uglifyjs script.js -o script.min.js
+```","[[06-glossary-fs.md#Minification|Minification]]"
+"Modal","A UI component that displays a dialog over other content.","```html
+<div class='modal'>Hello</div>
+```","[[06-glossary-fs.md#Modal|Modal]]"
+"Module Import","The process of bringing in code from external files or libraries.","```javascript
+import fs from 'fs';
+```","[[06-glossary-fs.md#Module Import|Module Import]]"
+"Mouseover","An event triggered when a mouse pointer enters an element.","```javascript
+div.addEventListener('mouseover', () => console.log('Hovered'));
+```","[[06-glossary-fs.md#Mouseover|Mouseover]]"
+"Mutation Observer","A JavaScript API to watch for changes in the DOM.","```javascript
+const observer = new MutationObserver(cb);
+observer.observe(el, { childList: true });
+```","[[06-glossary-fs.md#Mutation Observer|Mutation Observer]]"
+"NaN","A value that represents 'Not a Number'.","```javascript
+parseInt('abc'); // NaN
+```","[[06-glossary-fs.md#NaN|NaN]]"
+"Navigation","The process of moving between pages or views.","```javascript
+window.location.href = '/about';
+```","[[06-glossary-fs.md#Navigation|Navigation]]"
+"Nested Element","An element placed inside another in HTML.","```html
+<div><p>Text</p></div>
+```","[[06-glossary-fs.md#Nested Element|Nested Element]]"
+"New Keyword","Used to create an instance of an object or class.","```javascript
+const date = new Date();
+```","[[06-glossary-fs.md#New Keyword|New Keyword]]"
+"Node.js","A JavaScript runtime built on Chrome's V8 engine for server-side development.","```bash
+node server.js
+```","[[06-glossary-fs.md#Node.js|Node.js]]"
+"Normalize","The process of adjusting values or styles to a common baseline.","```css
+* {
+  margin: 0;
+  padding: 0;
+}
+```","[[06-glossary-fs.md#Normalize|Normalize]]"
+"Nullish Coalescing","A logical operator that returns the right-hand operand when the left is null or undefined.","```javascript
+const name = user.name ?? 'Guest';
+```","[[06-glossary-fs.md#Nullish Coalescing|Nullish Coalescing]]"
+"Object Literal","A syntax for defining objects using curly braces and key-value pairs.","```javascript
+const user = { name: 'Alex', age: 30 };
+```","[[06-glossary-fs.md#Object Literal|Object Literal]]"
+"OffsetHeight","A property that returns the height of an element including padding and borders.","```javascript
+element.offsetHeight;
+```","[[06-glossary-fs.md#OffsetHeight|OffsetHeight]]"
+"OffsetWidth","A property that returns the width of an element including padding and borders.","```javascript
+element.offsetWidth;
+```","[[06-glossary-fs.md#OffsetWidth|OffsetWidth]]"
+"OnClick","An event handler triggered when an element is clicked.","```html
+<button onclick=\"alert('clicked')\">Click</button>
+```","[[06-glossary-fs.md#OnClick|OnClick]]"
+"OnLoad","An event triggered when an element has finished loading.","```html
+<img src='image.jpg' onload='console.log(\"loaded\")'>
+```","[[06-glossary-fs.md#OnLoad|OnLoad]]"
+"OnSubmit","An event triggered when a form is submitted.","```html
+<form onsubmit=\"return false\">...</form>
+```","[[06-glossary-fs.md#OnSubmit|OnSubmit]]"
+"Opacity","A CSS property that controls the transparency of an element.","```css
+div {
+  opacity: 0.5;
+}
+```","[[06-glossary-fs.md#Opacity|Opacity]]"
+"Optional Chaining","A syntax that safely accesses deeply nested properties.","```javascript
+user?.address?.city;
+```","[[06-glossary-fs.md#Optional Chaining|Optional Chaining]]"
+"OR Operator","A logical operator that returns true if at least one condition is true.","```javascript
+if (a === 1 || b === 2) {
+  // do something
+}
+```","[[06-glossary-fs.md#OR Operator|OR Operator]]"
+"Overflow","A CSS property that controls content spilling outside its container.","```css
+div {
+  overflow: auto;
+}
+```","[[06-glossary-fs.md#Overflow|Overflow]]"
+"Package.json","A file that contains metadata for a Node.js project, including dependencies.","```json
+{
+  \"name\": \"my-app\",
+  \"version\": \"1.0.0\"
+}
+```","[[06-glossary-fs.md#Package.json|Package.json]]"
+"Padding","A CSS property that controls spacing inside an element’s border.","```css
+div {
+  padding: 10px;
+}
+```","[[06-glossary-fs.md#Padding|Padding]]"
+"Parent Node","The node that directly contains another node in the DOM.","```javascript
+element.parentNode;
+```","[[06-glossary-fs.md#Parent Node|Parent Node]]"
+"ParseFloat","A function that converts a string into a floating-point number.","```javascript
+parseFloat('3.14');
+```","[[06-glossary-fs.md#ParseFloat|ParseFloat]]"
+"ParseInt","A function that converts a string into an integer.","```javascript
+parseInt('42', 10);
+```","[[06-glossary-fs.md#ParseInt|ParseInt]]"
+"Path","The location of a file or route in a URL or file system.","```javascript
+'/home/user/project/file.txt'
+```","[[06-glossary-fs.md#Path|Path]]"
+"Performance","A browser API to measure timing and memory usage.","```javascript
+performance.now();
+```","[[06-glossary-fs.md#Performance|Performance]]"
+"PI","A property of the Math object representing π (pi).","```javascript
+Math.PI
+```","[[06-glossary-fs.md#PI|PI]]"
+"Placeholder","An attribute providing hint text in form fields.","```html
+<input placeholder='Enter name'>
+```","[[06-glossary-fs.md#Placeholder|Placeholder]]"
+"Pointer Events","Events that handle interactions from a mouse, pen, or touch device.","```javascript
+element.addEventListener('pointerdown', () => {...});
+```","[[06-glossary-fs.md#Pointer Events|Pointer Events]]"
+"Pop","An array method that removes and returns the last item.","```javascript
+let arr = [1, 2, 3];
+arr.pop(); // 3
+```","[[06-glossary-fs.md#Pop|Pop]]"
+"Position","A CSS property to set how an element is positioned in the document.","```css
+div {
+  position: relative;
+}
+```","[[06-glossary-fs.md#Position|Position]]"
+"Post Request","An HTTP request method used to send data to a server.","```javascript
+fetch('/submit', {
+  method: 'POST',
+  body: JSON.stringify({ name: 'Sam' })
+});
+```","[[06-glossary-fs.md#Post Request|Post Request]]"
+"Preload","A resource hint that tells the browser to fetch assets early.","```html
+<link rel='preload' href='style.css' as='style'>
+```","[[06-glossary-fs.md#Preload|Preload]]"
+"PreventDefault","A method used to stop the default action of an event.","```javascript
+event.preventDefault();
+```","[[06-glossary-fs.md#PreventDefault|PreventDefault]]"
+"Primary Key","A unique identifier for records in a database table.","```sql
+PRIMARY KEY (id)
+```","[[06-glossary-fs.md#Primary Key|Primary Key]]"
+"Property","A named value associated with an object.","```javascript
+const user = { name: 'Jane' };
+```","[[06-glossary-fs.md#Property|Property]]"
+"Prototype Chain","The chain of objects used to resolve property/method references.","```javascript
+Object.prototype
+```","[[06-glossary-fs.md#Prototype Chain|Prototype Chain]]"
+"Pseudo-class","A keyword added to selectors that specifies a special state.","```css
+a:hover {
+  color: red;
+}
+```","[[06-glossary-fs.md#Pseudo-class|Pseudo-class]]"
+"Push","An array method that adds one or more elements to the end of an array.","```javascript
+arr.push(4);
+```","[[06-glossary-fs.md#Push|Push]]"
+"QuerySelectorAll","A method that returns all elements matching a CSS selector.","```javascript
+document.querySelectorAll('.item');
+```","[[06-glossary-fs.md#QuerySelectorAll|QuerySelectorAll]]"
+"Radio Button","An input type that allows the user to select only one option from a set.","```html
+<input type='radio' name='gender' value='male'>
+```","[[06-glossary-fs.md#Radio Button|Radio Button]]"
+"Range Input","An input that lets users select a numeric value within a range.","```html
+<input type='range' min='1' max='10'>
+```","[[06-glossary-fs.md#Range Input|Range Input]]"
+"ReadOnly","An attribute that prevents user modification of a field.","```html
+<input type='text' readonly>
+```","[[06-glossary-fs.md#ReadOnly|ReadOnly]]"
+"Refactor","Rewriting code to improve structure without changing functionality.","```javascript
+// Before:
+if (type === 1) doX();
+else if (type === 2) doY();
+// After:
+const handlers = { 1: doX, 2: doY };
+handlers[type]();
+```","[[06-glossary-fs.md#Refactor|Refactor]]"
+"Relative Path","A file path that refers to a location relative to the current document.","```html
+<img src='./images/logo.png'>
+```","[[06-glossary-fs.md#Relative Path|Relative Path]]"
+"RemoveChild","A DOM method to remove a specified child node.","```javascript
+parent.removeChild(child);
+```","[[06-glossary-fs.md#RemoveChild|RemoveChild]]"
+"Replace","A string method that replaces parts of a string.","```javascript
+'cat'.replace('c', 'b'); // 'bat'
+```","[[06-glossary-fs.md#Replace|Replace]]"
+"RequestAnimationFrame","A browser API to optimize animations for performance.","```javascript
+requestAnimationFrame(() => drawFrame());
+```","[[06-glossary-fs.md#RequestAnimationFrame|RequestAnimationFrame]]"
+"Required","An attribute indicating a field must be filled out before submission.","```html
+<input type='email' required>
+```","[[06-glossary-fs.md#Required|Required]]"
+"Reset","A button or action that clears form fields to their initial values.","```html
+<input type='reset'>
+```","[[06-glossary-fs.md#Reset|Reset]]"
+"Resize Event","An event that fires when the window is resized.","```javascript
+window.addEventListener('resize', () => console.log('resized'));
+```","[[06-glossary-fs.md#Resize Event|Resize Event]]"
+"RGB","A color model using red, green, and blue values.","```css
+color: rgb(255, 0, 0);
+```","[[06-glossary-fs.md#RGB|RGB]]"
+"Router","A system for managing navigation in single-page applications.","```javascript
+<Route path='/about' component={About} />
+```","[[06-glossary-fs.md#Router|Router]]"
+"Sandbox","A security mechanism for running scripts or content in an isolated environment.","```html
+<iframe src='app.html' sandbox></iframe>
+```","[[06-glossary-fs.md#Sandbox|Sandbox]]"
+"Script Tag","An HTML element used to embed or reference executable JavaScript.","```html
+<script src='script.js'></script>
+```","[[06-glossary-fs.md#Script Tag|Script Tag]]"
+"Scroll","The action of moving content vertically or horizontally in a viewport.","```javascript
+window.scrollTo(0, 100);
+```","[[06-glossary-fs.md#Scroll|Scroll]]"
+"Select Element","An HTML element used to create a drop-down list.","```html
+<select>
+  <option>Option 1</option>
+</select>
+```","[[06-glossary-fs.md#Select Element|Select Element]]"
+"Semantic HTML","HTML that accurately describes its meaning to both browser and developer.","```html
+<article>
+  <header>Title</header>
+  <p>Content</p>
+</article>
+```","[[06-glossary-fs.md#Semantic HTML|Semantic HTML]]"
+"Server-Side","Operations that occur on the server, rather than in the user's browser.","```javascript
+app.get('/', (req, res) => res.send('Hello'));
+```","[[06-glossary-fs.md#Server-Side|Server-Side]]"
+"SetAttribute","A method to set the value of an attribute on an HTML element.","```javascript
+element.setAttribute('class', 'active');
+```","[[06-glossary-fs.md#SetAttribute|SetAttribute]]"
+"SetInterval","A method that repeatedly calls a function with a fixed time delay.","```javascript
+setInterval(() => console.log('Tick'), 1000);
+```","[[06-glossary-fs.md#SetInterval|SetInterval]]"
+"Shadow DOM","A web component feature for encapsulating DOM and CSS.","```javascript
+const shadow = element.attachShadow({ mode: 'open' });
+```","[[06-glossary-fs.md#Shadow DOM|Shadow DOM]]"
+"Shift","An array method that removes and returns the first item in an array.","```javascript
+const arr = [1, 2, 3];
+arr.shift(); // 1
+```","[[06-glossary-fs.md#Shift|Shift]]"
+"Short-Circuit Evaluation","A technique where logical expressions are evaluated from left to right and stop as soon as the result is known.","```javascript
+let result = true || false; // returns true
+```","[[06-glossary-fs.md#Short-Circuit Evaluation|Short-Circuit Evaluation]]"
+"Slice","A method that returns a shallow copy of a portion of an array or string.","```javascript
+[1, 2, 3, 4].slice(1, 3); // [2, 3]
+```","[[06-glossary-fs.md#Slice|Slice]]"
+"Slider","A UI element that lets users select a value from a range.","```html
+<input type='range' min='0' max='100'>
+```","[[06-glossary-fs.md#Slider|Slider]]"
+"Sort","An array method that sorts the elements of an array.","```javascript
+[3, 1, 2].sort(); // [1, 2, 3]
+```","[[06-glossary-fs.md#Sort|Sort]]"
+"Source Tag","An HTML tag used inside audio or video tags to specify media resources.","```html
+<video controls>
+  <source src='movie.mp4' type='video/mp4'>
+</video>
+```","[[06-glossary-fs.md#Source Tag|Source Tag]]"
+"Span","An inline HTML element used to group text or elements for styling.","```html
+<span class='highlight'>text</span>
+```","[[06-glossary-fs.md#Span|Span]]"
+"SQL Injection","A code injection technique that might destroy your database.","```sql
+SELECT * FROM users WHERE username = 'admin' OR 1=1;
+```","[[06-glossary-fs.md#SQL Injection|SQL Injection]]"
+"Src Attribute","An HTML attribute used to define the source of media elements like <img> or <script>.","```html
+<img src='image.jpg'>
+```","[[06-glossary-fs.md#Src Attribute|Src Attribute]]"
+"Stack","A data structure where elements are added and removed from the top (LIFO).","```javascript
+let stack = [];
+stack.push(1);
+stack.pop();
+```","[[06-glossary-fs.md#Stack|Stack]]"
+"Status Code","An HTTP response code indicating the result of a request.","```http
+HTTP/1.1 200 OK
+```","[[06-glossary-fs.md#Status Code|Status Code]]"
+"Sticky","A CSS position value where the element toggles between relative and fixed.","```css
+header {
+  position: sticky;
+  top: 0;
+}
+```","[[06-glossary-fs.md#Sticky|Sticky]]"
+"Strict Mode","A way to opt into a restricted variant of JavaScript for safer code.","```javascript
+'use strict';
+```","[[06-glossary-fs.md#Strict Mode|Strict Mode]]"
+"Style Attribute","An HTML attribute used to apply inline CSS styles.","```html
+<p style='color: red;'>Hello</p>
+```","[[06-glossary-fs.md#Style Attribute|Style Attribute]]"
+"Stylesheet","A file that contains CSS rules to style HTML elements.","```html
+<link rel='stylesheet' href='styles.css'>
+```","[[06-glossary-fs.md#Stylesheet|Stylesheet]]"
+"Submit","An action that sends form data to a server for processing.","```html
+<form action='/submit' method='POST'></form>
+```","[[06-glossary-fs.md#Submit|Submit]]"
+"SVG","Scalable Vector Graphics — a markup language for describing 2D graphics.","```html
+<svg width='100' height='100'><circle cx='50' cy='50' r='40' /></svg>
+```","[[06-glossary-fs.md#SVG|SVG]]"
+"Syntax","The set of rules that defines how JavaScript statements are constructed.","```javascript
+let x = 5;
+```","[[06-glossary-fs.md#Syntax|Syntax]]"
+"TabIndex","An attribute that controls the tab order of HTML elements.","```html
+<button tabindex='1'>Click Me</button>
+```","[[06-glossary-fs.md#TabIndex|TabIndex]]"
+"Tag","A keyword enclosed in angle brackets used to define elements in HTML.","```html
+<h1>Heading</h1>
+```","[[06-glossary-fs.md#Tag|Tag]]"
+"Target","Specifies where to open the linked document.","```html
+<a href='page.html' target='_blank'>Open</a>
+```","[[06-glossary-fs.md#Target|Target]]"
+"Template Tag","An HTML element for declaring reusable HTML chunks that are not rendered immediately.","```html
+<template id='item'>
+  <li>Item</li>
+</template>
+```","[[06-glossary-fs.md#Template Tag|Template Tag]]"
+"Ternary","A shorthand for an if/else condition using `?` and `:`.","```javascript
+let status = isOnline ? 'Online' : 'Offline';
+```","[[06-glossary-fs.md#Ternary|Ternary]]"
+"TextContent","A property that gets or sets the text content of an element.","```javascript
+element.textContent = 'Hello World';
+```","[[06-glossary-fs.md#TextContent|TextContent]]"
+"Textarea","An HTML element used for multiline text input.","```html
+<textarea rows='4' cols='50'></textarea>
+```","[[06-glossary-fs.md#Textarea|Textarea]]"
+"This Keyword","A reference to the object that is currently executing the function.","```javascript
+const person = {
+  name: 'Sam',
+  greet() {
+    return this.name;
+  }
+};
+```","[[06-glossary-fs.md#This Keyword|This Keyword]]"
+"Throw Statement","Used to manually throw an error.","```javascript
+throw new Error('Oops!');
+```","[[06-glossary-fs.md#Throw Statement|Throw Statement]]"
+"Timeout","Delays the execution of code for a specified time.","```javascript
+setTimeout(() => console.log('Done'), 1000);
+```","[[06-glossary-fs.md#Timeout|Timeout]]"
+"Title Tag","Specifies the title of the document shown in the browser tab.","```html
+<title>My Page</title>
+```","[[06-glossary-fs.md#Title Tag|Title Tag]]"
+"Token","A string used to verify identity or access rights in security systems.","```javascript
+const token = 'eyJhbGciOi...';
+```","[[06-glossary-fs.md#Token|Token]]"
+"Tooltip","A message that appears when a user hovers over an element.","```html
+<button title='Click to submit'>Submit</button>
+```","[[06-glossary-fs.md#Tooltip|Tooltip]]"
+"Transform","A CSS property that applies 2D or 3D transformations to elements.","```css
+div {
+  transform: rotate(45deg);
+}
+```","[[06-glossary-fs.md#Transform|Transform]]"
+"Transition","A CSS property that defines animation behavior when properties change.","```css
+div {
+  transition: all 0.3s ease;
+}
+```","[[06-glossary-fs.md#Transition|Transition]]"
+"Truthy","A value that evaluates to true in a Boolean context.","```javascript
+Boolean('hello'); // true
+```","[[06-glossary-fs.md#Truthy|Truthy]]"
+"Try Catch","A block used to handle exceptions without crashing the program.","```javascript
+try {
+  riskyFunction();
+} catch (error) {
+  console.error(error);
+}
+```","[[06-glossary-fs.md#Try Catch|Try Catch]]"
+"Tuple","A fixed-size collection of values, used in TypeScript and other languages.","```typescript
+let pair: [string, number] = ['age', 30];
+```","[[06-glossary-fs.md#Tuple|Tuple]]"
+"Type","The classification of data, such as string, number, or object.","```javascript
+typeof 42; // 'number'
+```","[[06-glossary-fs.md#Type|Type]]"
+"Type Conversion","The process of converting a value from one type to another.","```javascript
+Number('123'); // 123
+```","[[06-glossary-fs.md#Type Conversion|Type Conversion]]"
+"Typeof Operator","An operator that returns a string indicating the type of a variable.","```javascript
+typeof 42; // \"number\"
+```","[[06-glossary-fs.md#Typeof Operator|Typeof Operator]]"
+"Ul","An HTML element used to create an unordered list.","```html
+<ul>
+  <li>Item 1</li>
+</ul>
+```","[[06-glossary-fs.md#Ul|Ul]]"
+"Undefined","A variable that has been declared but not assigned a value.","```javascript
+let x;
+console.log(x); // undefined
+```","[[06-glossary-fs.md#Undefined|Undefined]]"
+"Unshift","Adds one or more elements to the beginning of an array.","```javascript
+let arr = [2, 3];
+arr.unshift(1); // [1, 2, 3]
+```","[[06-glossary-fs.md#Unshift|Unshift]]"
+"URL","A Uniform Resource Locator used to identify web resources.","```javascript
+const url = new URL('https://example.com');
+```","[[06-glossary-fs.md#URL|URL]]"
+"User Input","Data entered by the user through form fields or interface controls.","```html
+<input type='text'>
+```","[[06-glossary-fs.md#User Input|User Input]]"
+"UseEffect Hook","A React hook used to handle side effects in functional components.","```javascript
+useEffect(() => {
+  document.title = 'Updated';
+}, []);
+```","[[06-glossary-fs.md#UseEffect Hook|UseEffect Hook]]"
+"UseState Hook","A React hook that lets you add state to functional components.","```javascript
+const [count, setCount] = useState(0);
+```","[[06-glossary-fs.md#UseState Hook|UseState Hook]]"
+"UUID","A Universally Unique Identifier used to identify something uniquely.","```javascript
+crypto.randomUUID();
+```","[[06-glossary-fs.md#UUID|UUID]]"
+"Validation","The process of checking if user input meets certain criteria.","```html
+<input type='email' required>
+```","[[06-glossary-fs.md#Validation|Validation]]"
+"Value","The data assigned to a variable or the content of an input field.","```javascript
+let score = 100;
+```","[[06-glossary-fs.md#Value|Value]]"
+"Var","A variable declaration keyword with function scope (legacy).","```javascript
+var name = 'Sam';
+```","[[06-glossary-fs.md#Var|Var]]"
+"Variable","A named container used to store data values.","```javascript
+let age = 25;
+```","[[06-glossary-fs.md#Variable|Variable]]"
+"Vector Graphics","Graphics defined by paths, not pixels, allowing for infinite scaling.","```html
+<svg width='100' height='100'>...</svg>
+```","[[06-glossary-fs.md#Vector Graphics|Vector Graphics]]"
+"Vertical Align","A CSS property that aligns elements vertically relative to their container.","```css
+img {
+  vertical-align: middle;
+}
+```","[[06-glossary-fs.md#Vertical Align|Vertical Align]]"
+"Viewport Meta Tag","An HTML tag that controls how a page is scaled on different devices.","```html
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+```","[[06-glossary-fs.md#Viewport Meta Tag|Viewport Meta Tag]]"
+"Visibility","A CSS property that controls whether an element is visible or hidden.","```css
+div {
+  visibility: hidden;
+}
+```","[[06-glossary-fs.md#Visibility|Visibility]]"
+"Void Operator","An operator that evaluates an expression and returns undefined.","```javascript
+void function() { console.log('no return'); }();
+```","[[06-glossary-fs.md#Void Operator|Void Operator]]"
+"Vue","A progressive JavaScript framework for building user interfaces.","```javascript
+new Vue({ el: '#app' });
+```","[[06-glossary-fs.md#Vue|Vue]]"
+"Watchers","Vue feature that reacts to changes in data and executes code.","```javascript
+watch: {
+  count(newVal) {
+    console.log(newVal);
+  }
+}
+```","[[06-glossary-fs.md#Watchers|Watchers]]"
+"Web Accessibility","The practice of making web content usable for all people, including those with disabilities.","```html
+<button aria-label='Close'>X</button>
+```","[[06-glossary-fs.md#Web Accessibility|Web Accessibility]]"
+"Web API","Browser-provided APIs that allow developers to interact with features like the DOM, storage, and network.","```javascript
+navigator.geolocation.getCurrentPosition(...);
+```","[[06-glossary-fs.md#Web API|Web API]]"
+"WebAssembly","A binary instruction format for a stack-based virtual machine that runs in modern browsers.","```javascript
+// Compiled from C/C++ or Rust
+```","[[06-glossary-fs.md#WebAssembly|WebAssembly]]"
+"WebComponent","A reusable and encapsulated custom element built on Web Standards.","```javascript
+customElements.define('my-element', class extends HTMLElement {});
+```","[[06-glossary-fs.md#WebComponent|WebComponent]]"
+"WebGL","A JavaScript API for rendering 2D and 3D graphics in the browser.","```javascript
+const canvas = document.querySelector('canvas');
+const gl = canvas.getContext('webgl');
+```","[[06-glossary-fs.md#WebGL|WebGL]]"
+"WebSocket","A communication protocol for full-duplex communication between client and server.","```javascript
+const ws = new WebSocket('wss://example.com');
+```","[[06-glossary-fs.md#WebSocket|WebSocket]]"
+"While Loop","A loop that continues to run as long as the specified condition is true.","```javascript
+let i = 0;
+while (i < 5) {
+  console.log(i++);
+}
+```","[[06-glossary-fs.md#While Loop|While Loop]]"
+"White Space","Empty space in code or content used for layout or readability.","```css
+pre {
+  white-space: pre-wrap;
+}
+```","[[06-glossary-fs.md#White Space|White Space]]"
+"Width","A CSS property that sets the horizontal size of an element.","```css
+div {
+  width: 200px;
+}
+```","[[06-glossary-fs.md#Width|Width]]"
+"Window","The global object representing the browser's window.","```javascript
+console.log(window.location.href);
+```","[[06-glossary-fs.md#Window|Window]]"
+"Word Break","A CSS property that controls line-breaking rules.","```css
+word-break: break-word;
+```","[[06-glossary-fs.md#Word Break|Word Break]]"
+"Wrap Content","A layout behavior where content wraps onto the next line if needed.","```css
+.flex {
+  flex-wrap: wrap;
+}
+```","[[06-glossary-fs.md#Wrap Content|Wrap Content]]"
+"XHR","Short for XMLHttpRequest — an older API for sending HTTP requests.","```javascript
+const xhr = new XMLHttpRequest();
+xhr.open('GET', '/data');
+xhr.send();
+```","[[06-glossary-fs.md#XHR|XHR]]"
+"XML","Extensible Markup Language, used to encode documents in a format readable by both humans and machines.","```xml
+<note><to>User</to></note>
+```","[[06-glossary-fs.md#XML|XML]]"
+"YAML","A human-readable data serialization format, commonly used in configuration files.","```yaml
+name: Sample
+version: 1.0
+```","[[06-glossary-fs.md#YAML|YAML]]"
+"Yield","A keyword in generators to pause and resume function execution.","```javascript
+function* gen() {
+  yield 1;
+}
+```","[[06-glossary-fs.md#Yield|Yield]]"
+"Z-Index","A CSS property that defines the stack order of elements.","```css
+div {
+  z-index: 10;
+}
+```","[[06-glossary-fs.md#Z-Index|Z-Index]]"
+"Zoom","A non-standard CSS property that scales content size.","```css
+body {
+  zoom: 150%;
+}
+```","[[06-glossary-fs.md#Zoom|Zoom]]"
+"Aspect Ratio","The proportional relationship between an element's width and height.","```css
+img {
+  aspect-ratio: 16 / 9;
+}
+```","[[06-glossary-fs.md#Aspect Ratio|Aspect Ratio]]"
+"Async Function","A function declared with `async` that returns a Promise.","```javascript
+async function loadData() {
+  const res = await fetch('/data');
+}
+```","[[06-glossary-fs.md#Async Function|Async Function]]"
+"Attribute Selector","A CSS selector that targets elements based on attributes.","```css
+input[type='text'] {
+  background: yellow;
+}
+```","[[06-glossary-fs.md#Attribute Selector|Attribute Selector]]"
+"Auto","A CSS keyword that lets the browser calculate the property value.","```css
+margin: auto;
+```","[[06-glossary-fs.md#Auto|Auto]]"
+"Baseline","A typographic alignment line used in vertical alignment and layout.","```css
+vertical-align: baseline;
+```","[[06-glossary-fs.md#Baseline|Baseline]]"
+"Blur Event","Fired when an element loses focus.","```javascript
+input.addEventListener('blur', () => console.log('lost focus'));
+```","[[06-glossary-fs.md#Blur Event|Blur Event]]"
+"Breakpoints","Defined widths in responsive design where layout changes occur.","```css
+@media (max-width: 768px) { ... }
+```","[[06-glossary-fs.md#Breakpoints|Breakpoints]]"
+"Bubbling","The event phase where the event bubbles from the target up to the ancestors.","```javascript
+document.body.addEventListener('click', () => console.log('bubbled'));
+```","[[06-glossary-fs.md#Bubbling|Bubbling]]"
+"Canvas","An HTML element used to draw graphics using JavaScript.","```html
+<canvas id='myCanvas'></canvas>
+```","[[06-glossary-fs.md#Canvas|Canvas]]"
+"CharAt","A string method that returns the character at a specified index.","```javascript
+'hello'.charAt(1); // 'e'
+```","[[06-glossary-fs.md#CharAt|CharAt]]"
+"Checked","An attribute indicating a form input (like a checkbox) is selected.","```html
+<input type='checkbox' checked>
+```","[[06-glossary-fs.md#Checked|Checked]]"
+"Code Snippet","A short piece of code used as an example or reusable block.","```javascript
+console.log('example');
+```","[[06-glossary-fs.md#Code Snippet|Code Snippet]]"
+"Content-Type","An HTTP header that describes the data format of the request or response.","```http
+Content-Type: application/json
+```","[[06-glossary-fs.md#Content-Type|Content-Type]]"
+"Decrement","Reducing a numerical value by one.","```javascript
+let count = 5;
+count--;
+```","[[06-glossary-fs.md#Decrement|Decrement]]"
+"Falsy Value","A value that evaluates to false in a boolean context.","```javascript
+if (!0) console.log('0 is falsy');
+```","[[06-glossary-fs.md#Falsy Value|Falsy Value]]"
+"Keypress Event","Fired when a key is pressed (deprecated in favor of keydown).","```javascript
+input.addEventListener('keypress', e => console.log(e.key));
+```","[[06-glossary-fs.md#Keypress Event|Keypress Event]]"
+"Literal","A fixed value in code, such as a number or string.","```javascript
+const greeting = 'Hello'; // 'Hello' is a string literal
+```","[[06-glossary-fs.md#Literal|Literal]]"
+"NaN Check","The act of verifying whether a value is NaN.","```javascript
+isNaN('abc'); // true
+```","[[06-glossary-fs.md#NaN Check|NaN Check]]"
+"Null","A special value that represents no value or empty.","```javascript
+let data = null;
+```","[[06-glossary-fs.md#Null|Null]]"
+"Overflow Hidden","A CSS rule that hides any content that overflows its container.","```css
+div {
+  overflow: hidden;
+}
+```","[[06-glossary-fs.md#Overflow Hidden|Overflow Hidden]]"
+"Responsive Design","An approach to design that ensures usability across various screen sizes.","```css
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+```","[[06-glossary-fs.md#Responsive Design|Responsive Design]]"
+"Script Async","A script loading mode that allows asynchronous execution.","```html
+<script src='app.js' async></script>
+```","[[06-glossary-fs.md#Script Async|Script Async]]"
+"Script Defer","A script loading mode that defers execution until after the document has loaded.","```html
+<script src='main.js' defer></script>
+```","[[06-glossary-fs.md#Script Defer|Script Defer]]"
+"SessionStorage","A storage object that retains data only for the duration of a page session.","```javascript
+sessionStorage.setItem('token', 'abc123');
+```","[[06-glossary-fs.md#SessionStorage|SessionStorage]]"
+"Text Node","A node in the DOM that contains text but no HTML tags.","```javascript
+document.createTextNode('Hello');
+```","[[06-glossary-fs.md#Text Node|Text Node]]"
+"Transition Delay","A CSS property that delays the start of a transition.","```css
+div {
+  transition-delay: 0.5s;
+}
+```","[[06-glossary-fs.md#Transition Delay|Transition Delay]]"
+"Transition Duration","A CSS property that defines how long a transition takes.","```css
+div {
+  transition-duration: 2s;
+}
+```","[[06-glossary-fs.md#Transition Duration|Transition Duration]]"
+"Viewport","The visible area of a web page in the browser.","```javascript
+console.log(window.innerWidth);
+```","[[06-glossary-fs.md#Viewport|Viewport]]"
+"Whitespace","Any space, tab, or newline character in a document.","```html
+<p>Line 1<br>Line 2</p>
+```","[[06-glossary-fs.md#Whitespace|Whitespace]]"
+"Window Event","An event that occurs in the browser window object.","```javascript
+window.addEventListener('resize', () => console.log('resized'));
+```","[[06-glossary-fs.md#Window Event|Window Event]]"
+
+
+

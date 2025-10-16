@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Responsive Design Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-8">Responsive Design in Tailwind CSS</h1>
+        
+        <!-- Breakpoint Information -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Tailwind Breakpoints</h2>
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="text-left p-2">Prefix</th>
+                            <th class="text-left p-2">Minimum Width</th>
+                            <th class="text-left p-2">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600">
+                        <tr class="border-b">
+                            <td class="p-2 font-mono">sm:</td>
+                            <td class="p-2">640px</td>
+                            <td class="p-2">Small devices and up</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-2 font-mono">md:</td>
+                            <td class="p-2">768px</td>
+                            <td class="p-2">Medium devices and up</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-2 font-mono">lg:</td>
+                            <td class="p-2">1024px</td>
+                            <td class="p-2">Large devices and up</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-2 font-mono">xl:</td>
+                            <td class="p-2">1280px</td>
+                            <td class="p-2">Extra large devices and up</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 font-mono">2xl:</td>
+                            <td class="p-2">1536px</td>
+                            <td class="p-2">2X extra large devices and up</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Responsive Text -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Typography</h2>
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-600 mb-4">
+                    Responsive Heading (text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl)
+                </h3>
+                <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-4">
+                    This paragraph text changes size based on screen size (text-sm sm:text-base md:text-lg)
+                </p>
+                <p class="text-xs sm:text-sm md:text-base text-gray-500">
+                    Even smaller text that scales up (text-xs sm:text-sm md:text-base)
+                </p>
+            </div>
+        </section>
+
+        <!-- Responsive Spacing -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Spacing</h2>
+            <div class="space-y-4 md:space-y-6">
+                <div class="bg-white p-2 sm:p-4 md:p-6 lg:p-8 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2">Responsive Padding</h3>
+                    <p class="text-gray-600">This container has padding that increases with screen size: p-2 sm:p-4 md:p-6 lg:p-8</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <h3 class="font-semibold mb-2 sm:mb-4 md:mb-6">Responsive Margins</h3>
+                    <p class="text-gray-600">This heading has margin-bottom that increases: mb-2 sm:mb-4 md:mb-6</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Grid -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Grid Layout</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-blue-800">Item 1</h3>
+                    <p class="text-blue-600 text-sm">1 col on mobile</p>
+                </div>
+                <div class="bg-green-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-green-800">Item 2</h3>
+                    <p class="text-green-600 text-sm">2 cols on sm+</p>
+                </div>
+                <div class="bg-yellow-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-yellow-800">Item 3</h3>
+                    <p class="text-yellow-600 text-sm">3 cols on md+</p>
+                </div>
+                <div class="bg-purple-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-purple-800">Item 4</h3>
+                    <p class="text-purple-600 text-sm">4 cols on lg+</p>
+                </div>
+                <div class="bg-red-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-red-800">Item 5</h3>
+                    <p class="text-red-600 text-sm">Wraps to new row</p>
+                </div>
+                <div class="bg-indigo-100 p-4 rounded-lg text-center">
+                    <h3 class="font-semibold text-indigo-800">Item 6</h3>
+                    <p class="text-indigo-600 text-sm">As needed</p>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm mt-4">
+                Grid: grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
+            </p>
+        </section>
+
+        <!-- Responsive Visibility -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Visibility</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded-lg shadow-sm">
+                    <p class="block sm:hidden bg-red-100 text-red-800 p-2 rounded">📱 Only visible on mobile (block sm:hidden)</p>
+                    <p class="hidden sm:block md:hidden bg-blue-100 text-blue-800 p-2 rounded">💻 Only visible on small screens (hidden sm:block md:hidden)</p>
+                    <p class="hidden md:block lg:hidden bg-green-100 text-green-800 p-2 rounded">🖥️ Only visible on medium screens (hidden md:block lg:hidden)</p>
+                    <p class="hidden lg:block bg-purple-100 text-purple-800 p-2 rounded">🖥️ Only visible on large screens and up (hidden lg:block)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Navigation Example -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Navigation</h2>
+            <nav class="bg-white rounded-lg shadow-sm">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center h-16">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <h3 class="text-lg font-bold text-gray-900">Logo</h3>
+                        </div>
+                        
+                        <!-- Desktop Navigation -->
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                                <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                                <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                                <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden">
+                            <button class="text-gray-600 hover:text-gray-900 p-2">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Navigation (hidden by default) -->
+                <div class="md:hidden border-t border-gray-200">
+                    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                        <a href="#" class="text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                        <a href="#" class="text-gray-600 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                        <a href="#" class="text-gray-600 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                        <a href="#" class="text-gray-600 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- Responsive Card Layout -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Card Layout</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-32 sm:h-40 md:h-32 lg:h-40 bg-gradient-to-r from-blue-400 to-purple-500"></div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Product Card</h3>
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            This card adapts to different screen sizes with responsive images and text.
+                        </p>
+                        <button class="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-32 sm:h-40 md:h-32 lg:h-40 bg-gradient-to-r from-green-400 to-teal-500"></div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Another Card</h3>
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            Notice how the layout changes from 1 column on mobile to 2 on tablet to 3 on desktop.
+                        </p>
+                        <button class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden md:col-span-2 xl:col-span-1">
+                    <div class="h-32 sm:h-40 md:h-32 lg:h-40 bg-gradient-to-r from-purple-400 to-pink-500"></div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Third Card</h3>
+                        <p class="text-gray-600 text-sm sm:text-base mb-4">
+                            This card spans 2 columns on medium screens but returns to 1 column on extra large screens.
+                        </p>
+                        <button class="w-full sm:w-auto bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Flexbox -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Flexbox</h2>
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900">Flexible Layout</h3>
+                        <p class="text-gray-600">Changes from vertical stack to horizontal layout</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            Primary
+                        </button>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors">
+                            Secondary
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Images -->
+        <section class="mb-8 md:mb-12">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Responsive Images</h2>
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="lg:w-1/2">
+                        <div class="w-full h-48 sm:h-64 md:h-48 lg:h-56 bg-gradient-to-r from-orange-400 to-red-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-semibold">Responsive Image Area</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">Image Content</h3>
+                        <p class="text-gray-600 mb-4">
+                            On large screens, the image and text are side by side. On smaller screens, 
+                            they stack vertically for better mobile experience.
+                        </p>
+                        <p class="text-gray-600">
+                            The image height also adjusts based on screen size for optimal viewing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Breakpoint Indicator -->
+        <section class="mb-8">
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-800 mb-4">Current Breakpoint</h2>
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div class="text-center">
+                    <div class="block sm:hidden">
+                        <div class="bg-red-100 text-red-800 font-semibold py-2 px-4 rounded-lg">
+                            📱 Mobile (less than 640px)
+                        </div>
+                    </div>
+                    <div class="hidden sm:block md:hidden">
+                        <div class="bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg">
+                            📱 Small (640px - 767px)
+                        </div>
+                    </div>
+                    <div class="hidden md:block lg:hidden">
+                        <div class="bg-green-100 text-green-800 font-semibold py-2 px-4 rounded-lg">
+                            💻 Medium (768px - 1023px)
+                        </div>
+                    </div>
+                    <div class="hidden lg:block xl:hidden">
+                        <div class="bg-purple-100 text-purple-800 font-semibold py-2 px-4 rounded-lg">
+                            🖥️ Large (1024px - 1279px)
+                        </div>
+                    </div>
+                    <div class="hidden xl:block 2xl:hidden">
+                        <div class="bg-yellow-100 text-yellow-800 font-semibold py-2 px-4 rounded-lg">
+                            🖥️ Extra Large (1280px - 1535px)
+                        </div>
+                    </div>
+                    <div class="hidden 2xl:block">
+                        <div class="bg-indigo-100 text-indigo-800 font-semibold py-2 px-4 rounded-lg">
+                            🖥️ 2X Extra Large (1536px+)
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm mt-4 text-center">
+                    Resize your browser window to see the breakpoint change!
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
