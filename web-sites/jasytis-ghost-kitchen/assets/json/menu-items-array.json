@@ -1,0 +1,32 @@
+{
+  "fries": {
+    "name": "Fries",
+    "category": "Sides",
+    "price": 2.99,
+    "image": "https://jasytionline.github.io/r61-fullstack/web-sites/jasytis-ghost-kitchen/assets/img/fries.png"
+  },
+  "classicBurger": {
+    "name": "Classic Burger",
+    "category": "Burgers",
+    "price": 7.99,
+    "image": "https://jasytionline.github.io/r61-fullstack/web-sites/jasytis-ghost-kitchen/assets/img/ham-wc.png"
+  },
+  "milkshake": {
+    "name": "Strawberry Milkshake",
+    "category": "Drinks",
+    "price": 4.25,
+    "image": "https://jasytionline.github.io/r61-fullstack/web-sites/jasytis-ghost-kitchen/assets/img/milkshake.png"
+  },
+  "cherryPie": {
+    "name": "Cherry Pie",
+    "category": "Desserts",
+    "price": 3.75,
+    "image": "https://jasytionline.github.io/r61-fullstack/web-sites/jasytis-ghost-kitchen/assets/img/pie.png"
+  },
+  "doubleBurger": {
+    "name": "Double Bacon Burger",
+    "category": "Burgers",
+    "price": 10.50,
+    "image": "https://jasytionline.github.io/r61-fullstack/web-sites/jasytis-ghost-kitchen/assets/img/dub-ham-wc.png"
+  }
+}
